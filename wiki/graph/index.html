@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>choonbrain 지식 그래프</title>
+<style>
+  :root {
+    --bg: #0b0f1a; --panel: rgba(20,26,42,0.92); --panel-solid:#141a2a;
+    --border: #263149; --text: #e6ebf5; --muted:#95a3bd; --accent:#818cf8;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin:0; height:100%; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased; overflow:hidden; }
+  #graph { position:fixed; inset:0; }
+  #loading { position:fixed; inset:0; display:flex; align-items:center; justify-content:center;
+    color:var(--muted); font-size:15px; z-index:5; }
+
+  /* top bar */
+  #topbar { position:fixed; top:0; left:0; right:0; z-index:10; display:flex; align-items:center; gap:10px;
+    padding:10px 14px; background:linear-gradient(180deg,rgba(11,15,26,0.95),rgba(11,15,26,0)); pointer-events:none; }
+  #topbar > * { pointer-events:auto; }
+  #title { font-weight:700; font-size:16px; letter-spacing:-0.2px; }
+  #title small { color:var(--muted); font-weight:500; margin-left:8px; font-size:12px; }
+  .homelink { color:var(--accent); text-decoration:none; font-size:13px; font-weight:600;
+    border:1px solid var(--border); padding:6px 10px; border-radius:8px; background:var(--panel); }
+  .homelink:hover { background:#1b2338; }
+  #menuBtn { display:none; }
+
+  /* control panel */
+  #panel { position:fixed; top:56px; left:14px; z-index:9; width:270px; max-height:calc(100vh - 76px);
+    overflow-y:auto; background:var(--panel); border:1px solid var(--border); border-radius:14px;
+    padding:14px; backdrop-filter:blur(10px); font-size:13px; }
+  #panel h3 { margin:0 0 8px; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted); }
+  .sect { margin-bottom:16px; }
+  .row { display:flex; align-items:center; gap:8px; padding:3px 0; cursor:pointer; user-select:none; }
+  .row input { accent-color:var(--accent); width:15px; height:15px; }
+  .dot { width:11px; height:11px; border-radius:50%; flex:0 0 auto; }
+  .bar { width:14px; height:4px; border-radius:2px; flex:0 0 auto; }
+  .row .cnt { margin-left:auto; color:var(--muted); font-size:11px; }
+  #search { width:100%; padding:8px 10px; border-radius:9px; border:1px solid var(--border);
+    background:var(--panel-solid); color:var(--text); font-size:13px; outline:none; }
+  #search:focus { border-color:var(--accent); }
+  .seg { display:flex; gap:6px; }
+  .seg button { flex:1; padding:6px 4px; font-size:12px; border-radius:8px; border:1px solid var(--border);
+    background:var(--panel-solid); color:var(--muted); cursor:pointer; }
+  .seg button.on { background:var(--accent); color:#0b0f1a; border-color:var(--accent); font-weight:700; }
+  select { width:100%; padding:7px 9px; border-radius:9px; border:1px solid var(--border);
+    background:var(--panel-solid); color:var(--text); font-size:13px; }
+  .toolrow { display:flex; gap:8px; }
+  .toolrow button { flex:1; padding:7px; font-size:12px; border-radius:8px; border:1px solid var(--border);
+    background:var(--panel-solid); color:var(--text); cursor:pointer; }
+  .toolrow button:hover { border-color:var(--accent); }
+  .stat { color:var(--muted); font-size:12px; margin-top:2px; }
+
+  /* detail panel */
+  #detail { position:fixed; top:56px; right:14px; z-index:9; width:300px; max-width:calc(100vw - 28px);
+    background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:16px;
+    backdrop-filter:blur(10px); display:none; }
+  #detail .type-badge { display:inline-block; font-size:11px; padding:3px 9px; border-radius:999px;
+    color:#0b0f1a; font-weight:700; margin-bottom:10px; }
+  #detail h2 { margin:0 0 8px; font-size:18px; line-height:1.3; }
+  #detail .summary { color:#cdd6ea; font-size:13.5px; line-height:1.6; margin:0 0 12px; }
+  #detail .metaline { color:var(--muted); font-size:12px; margin:4px 0; }
+  #detail .tags { display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 14px; }
+  #detail .tag { font-size:11px; padding:3px 8px; border-radius:999px; background:var(--panel-solid);
+    border:1px solid var(--border); color:#bcc7de; }
+  #detail a.open { display:inline-block; padding:9px 14px; border-radius:9px; background:var(--accent);
+    color:#0b0f1a; text-decoration:none; font-weight:700; font-size:13px; }
+  #detail .close { position:absolute; top:12px; right:12px; cursor:pointer; color:var(--muted);
+    font-size:20px; line-height:1; border:none; background:none; }
+
+  @media (max-width:720px) {
+    #panel { display:none; width:calc(100vw - 28px); }
+    #panel.open { display:block; }
+    #menuBtn { display:inline-block; pointer-events:auto; border:1px solid var(--border);
+      background:var(--panel); color:var(--text); border-radius:8px; padding:6px 11px; font-size:15px; cursor:pointer; }
+    #detail { top:auto; bottom:14px; right:14px; left:14px; width:auto; max-height:52vh; overflow-y:auto; }
+    #title small { display:none; }
+  }
+</style>
+</head>
+<body>
+<div id="graph"></div>
+<div id="loading">그래프 불러오는 중…</div>
+
+<div id="topbar">
+  <button id="menuBtn" aria-label="필터">☰</button>
+  <div id="title">🧠 지식 그래프 <small id="subtitle"></small></div>
+  <div style="flex:1"></div>
+  <a class="homelink" href="../">← 위키</a>
+</div>
+
+<div id="panel">
+  <div class="sect">
+    <input id="search" type="search" placeholder="노드·태그 검색…" autocomplete="off" />
+  </div>
+  <div class="sect">
+    <h3>보기</h3>
+    <div class="seg" id="viewSeg">
+      <button data-view="all" class="on">전체</button>
+      <button data-view="external">외부</button>
+      <button data-view="mine">내 생각</button>
+    </div>
+  </div>
+  <div class="sect">
+    <h3>토픽</h3>
+    <select id="topicSel"><option value="all">전체 토픽</option></select>
+  </div>
+  <div class="sect">
+    <h3>노드 유형</h3>
+    <div id="typeFilters"></div>
+  </div>
+  <div class="sect">
+    <h3>관계 유형</h3>
+    <div id="edgeFilters"></div>
+  </div>
+  <div class="sect">
+    <h3>표시</h3>
+    <label class="row"><input type="checkbox" id="labelToggle" checked /> 라벨 표시</label>
+    <div class="toolrow" style="margin-top:8px">
+      <button id="resetView">시점 초기화</button>
+      <button id="resetFilters">필터 초기화</button>
+    </div>
+    <div class="stat" id="stat"></div>
+  </div>
+</div>
+
+<div id="detail">
+  <button class="close" id="detailClose">×</button>
+  <span class="type-badge" id="dBadge"></span>
+  <h2 id="dTitle"></h2>
+  <p class="summary" id="dSummary"></p>
+  <div class="metaline" id="dTopic"></div>
+  <div class="metaline" id="dOrigin"></div>
+  <div class="tags" id="dTags"></div>
+  <a class="open" id="dOpen" href="#">위키에서 열기 →</a>
+</div>
+
+<script src="https://unpkg.com/three-spritetext@1.8.2"></script>
+<script src="https://unpkg.com/3d-force-graph@1.73.4"></script>
+<script>
+const TYPE = {
+  concept:   { ko:"개념/의미", color:"#6366f1" },
+  insight:   { ko:"통찰",      color:"#f59e0b" },
+  claim:     { ko:"주장",      color:"#ef4444" },
+  procedure: { ko:"절차",      color:"#10b981" },
+  event:     { ko:"사건",      color:"#ec4899" },
+  entity:    { ko:"개체",      color:"#06b6d4" }
+};
+const EDGE = {
+  support:  { ko:"지지",  color:"#34d399" },
+  extend:   { ko:"확장",  color:"#818cf8" },
+  refute:   { ko:"반박",  color:"#f87171" },
+  related:  { ko:"관련",  color:"#7c89a6" },
+  "part-of":{ ko:"포함",  color:"#fbbf24" }
+};
+
+const state = {
+  all:{nodes:[],links:[]},
+  view:"all", topic:"all", query:"",
+  types:new Set(Object.keys(TYPE)),
+  edges:new Set(Object.keys(EDGE)),
+  labels:true
+};
+let Graph;
+
+function colorOf(n){ return (TYPE[n.type]||{}).color || "#9aa"; }
+
+function buildFilters(){
+  const tc={}, ec={};
+  state.all.nodes.forEach(n=> tc[n.type]=(tc[n.type]||0)+1);
+  state.all.links.forEach(l=> ec[l.type]=(ec[l.type]||0)+1);
+  const tf=document.getElementById("typeFilters");
+  tf.innerHTML="";
+  Object.keys(TYPE).forEach(t=>{
+    if(!tc[t]) return;
+    const el=document.createElement("label"); el.className="row";
+    el.innerHTML=`<input type="checkbox" checked><span class="dot" style="background:${TYPE[t].color}"></span>${TYPE[t].ko}<span class="cnt">${tc[t]}</span>`;
+    el.querySelector("input").addEventListener("change",e=>{
+      e.target.checked?state.types.add(t):state.types.delete(t); apply();
+    });
+    tf.appendChild(el);
+  });
+  const ef=document.getElementById("edgeFilters");
+  ef.innerHTML="";
+  Object.keys(EDGE).forEach(t=>{
+    if(!ec[t]) return;
+    const el=document.createElement("label"); el.className="row";
+    el.innerHTML=`<input type="checkbox" checked><span class="bar" style="background:${EDGE[t].color}"></span>${EDGE[t].ko}<span class="cnt">${ec[t]}</span>`;
+    el.querySelector("input").addEventListener("change",e=>{
+      e.target.checked?state.edges.add(t):state.edges.delete(t); apply();
+    });
+    ef.appendChild(el);
+  });
+  const topics=[...new Set(state.all.nodes.map(n=>n.topic))].sort();
+  const sel=document.getElementById("topicSel");
+  const label={"knowledge-management":"지식관리","ai-native-careers":"AI 네이티브 커리어","ai-agents":"AI 에이전트","cross":"연결(cross)"};
+  topics.forEach(t=>{ const o=document.createElement("option"); o.value=t; o.textContent=label[t]||t; sel.appendChild(o); });
+}
+
+function visibleData(){
+  const q=state.query.trim().toLowerCase();
+  const nodes=state.all.nodes.filter(n=>{
+    if(!state.types.has(n.type)) return false;
+    if(state.view!=="all" && n.origin!==state.view) return false;
+    if(state.topic!=="all" && n.topic!==state.topic) return false;
+    if(q){
+      const hay=(n.label+" "+n.summary+" "+(n.tags||[]).join(" ")).toLowerCase();
+      if(!hay.includes(q)) return false;
+    }
+    return true;
+  });
+  const ids=new Set(nodes.map(n=>n.id));
+  const links=state.all.links.filter(l=>{
+    if(!state.edges.has(l.type)) return false;
+    const s=typeof l.source==="object"?l.source.id:l.source;
+    const t=typeof l.target==="object"?l.target.id:l.target;
+    return ids.has(s)&&ids.has(t);
+  });
+  return {nodes,links};
+}
+
+function makeSprite(n){
+  const s=new SpriteText(n.label);
+  s.color="#e6ebf5"; s.textHeight=3.4;
+  s.backgroundColor="rgba(11,15,26,0.55)"; s.padding=1.4; s.borderRadius=2;
+  s.fontFace="-apple-system, sans-serif";
+  return s;
+}
+
+function apply(){
+  const d=visibleData();
+  Graph.graphData(d);
+  document.getElementById("stat").textContent=`노드 ${d.nodes.length} · 관계 ${d.links.length}`;
+}
+
+function showDetail(n){
+  const d=document.getElementById("detail");
+  const badge=document.getElementById("dBadge");
+  badge.textContent=(TYPE[n.type]||{}).ko||n.type; badge.style.background=colorOf(n);
+  document.getElementById("dTitle").textContent=n.label;
+  document.getElementById("dSummary").textContent=n.summary||"";
+  const tl={"knowledge-management":"지식관리","ai-native-careers":"AI 네이티브 커리어","ai-agents":"AI 에이전트","cross":"연결(cross)"};
+  document.getElementById("dTopic").textContent="토픽 · "+(tl[n.topic]||n.topic);
+  document.getElementById("dOrigin").textContent="출처 · "+(n.origin==="mine"?"내 생각(합성)":"외부 자료");
+  const tags=document.getElementById("dTags"); tags.innerHTML="";
+  (n.tags||[]).forEach(t=>{ const s=document.createElement("span"); s.className="tag"; s.textContent="#"+t; tags.appendChild(s); });
+  document.getElementById("dOpen").href=n.url||"../";
+  d.style.display="block";
+}
+
+fetch("graph.json").then(r=>r.json()).then(data=>{
+  document.getElementById("loading").style.display="none";
+  state.all=data;
+  document.getElementById("subtitle").textContent=`노드 ${data.nodes.length} · 관계 ${data.links.length}`;
+  buildFilters();
+
+  Graph=ForceGraph3D()(document.getElementById("graph"))
+    .backgroundColor("#0b0f1a")
+    .nodeRelSize(5)
+    .nodeVal(n=>1+(n.__deg||0)*0.9)
+    .nodeColor(colorOf)
+    .nodeOpacity(0.95)
+    .nodeLabel(n=>`<div style="font:600 13px sans-serif;color:#fff">${n.label}</div><div style="font:11px sans-serif;color:#95a3bd">${(TYPE[n.type]||{}).ko||''}</div>`)
+    .linkColor(l=>(EDGE[l.type]||{}).color||"#556")
+    .linkOpacity(0.5)
+    .linkWidth(0.7)
+    .linkDirectionalArrowLength(3)
+    .linkDirectionalArrowRelPos(1)
+    .linkDirectionalParticles(0)
+    .nodeThreeObjectExtend(true)
+    .nodeThreeObject(n=> state.labels ? makeSprite(n) : null)
+    .onNodeClick(n=>{
+      const dist=90; const r=1+dist/Math.hypot(n.x||1,n.y||1,n.z||1);
+      Graph.cameraPosition({x:(n.x||0)*r,y:(n.y||0)*r,z:(n.z||0)*r}, n, 900);
+      showDetail(n);
+    })
+    .onBackgroundClick(()=>{ document.getElementById("detail").style.display="none"; });
+
+  // compute degree for sizing
+  const deg={};
+  data.links.forEach(l=>{ deg[l.source]=(deg[l.source]||0)+1; deg[l.target]=(deg[l.target]||0)+1; });
+  data.nodes.forEach(n=> n.__deg=deg[n.id]||0);
+
+  Graph.d3Force("charge").strength(-140);
+  apply();
+});
+
+// controls
+document.getElementById("search").addEventListener("input",e=>{ state.query=e.target.value; apply(); });
+document.getElementById("topicSel").addEventListener("change",e=>{ state.topic=e.target.value; apply(); });
+document.querySelectorAll("#viewSeg button").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll("#viewSeg button").forEach(x=>x.classList.remove("on"));
+  b.classList.add("on"); state.view=b.dataset.view; apply();
+}));
+document.getElementById("labelToggle").addEventListener("change",e=>{
+  state.labels=e.target.checked;
+  Graph.nodeThreeObject(n=> state.labels ? makeSprite(n) : null);
+});
+document.getElementById("resetView").addEventListener("click",()=> Graph.zoomToFit(700,60));
+document.getElementById("resetFilters").addEventListener("click",()=>{
+  state.view="all"; state.topic="all"; state.query="";
+  state.types=new Set(Object.keys(TYPE)); state.edges=new Set(Object.keys(EDGE));
+  document.getElementById("search").value="";
+  document.getElementById("topicSel").value="all";
+  document.querySelectorAll("#viewSeg button").forEach(x=>x.classList.toggle("on",x.dataset.view==="all"));
+  document.querySelectorAll("#typeFilters input,#edgeFilters input").forEach(i=>i.checked=true);
+  apply();
+});
+document.getElementById("detailClose").addEventListener("click",()=> document.getElementById("detail").style.display="none");
+document.getElementById("menuBtn").addEventListener("click",()=> document.getElementById("panel").classList.toggle("open"));
+</script>
+</body>
+</html>
