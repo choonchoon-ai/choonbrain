@@ -6,3 +6,7 @@ Thumbs.db
 # MkDocs build output
 site/
 .venv/
+
+# GitHub Actions workflow — 현재 gh token에 workflow 권한이 없어 추적 제외
+# (자동배포 켜려면: gh auth refresh -s workflow 후 강제 추가)
+.github/workflows/
