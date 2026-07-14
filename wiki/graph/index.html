@@ -223,11 +223,16 @@ function visibleData(){
 }
 
 function makeSprite(n){
-  const s=new SpriteText(n.label);
-  s.color="#e6ebf5"; s.textHeight=3.4;
-  s.backgroundColor="rgba(11,15,26,0.55)"; s.padding=1.4; s.borderRadius=2;
-  s.fontFace="-apple-system, sans-serif";
-  return s;
+  try {
+    if(typeof SpriteText==="undefined") return null; // 라벨 라이브러리 미로딩 → 기본 구체로 폴백
+    const s=new SpriteText(n.label);
+    s.color=colorOf(n); s.textHeight=4.5;
+    s.backgroundColor="rgba(11,15,26,0.65)"; s.padding=2; s.borderRadius=3;
+    s.borderWidth=0.4; s.borderColor="rgba(130,140,200,0.35)";
+    s.fontFace="-apple-system, sans-serif";
+    if(s.material) s.material.depthWrite=false;
+    return s;
+  } catch(e){ return null; }
 }
 
 function apply(){
@@ -270,8 +275,10 @@ fetch("graph.json").then(r=>r.json()).then(data=>{
     .linkDirectionalArrowLength(3)
     .linkDirectionalArrowRelPos(1)
     .linkDirectionalParticles(0)
-    .nodeThreeObjectExtend(true)
+    .nodeThreeObjectExtend(false)
     .nodeThreeObject(n=> state.labels ? makeSprite(n) : null)
+    .cooldownTicks(120)
+    .onEngineStop(()=>{ if(!window.__fit){ window.__fit=true; Graph.zoomToFit(700,70); } })
     .onNodeClick(n=>{
       const dist=90; const r=1+dist/Math.hypot(n.x||1,n.y||1,n.z||1);
       Graph.cameraPosition({x:(n.x||0)*r,y:(n.y||0)*r,z:(n.z||0)*r}, n, 900);
@@ -286,6 +293,7 @@ fetch("graph.json").then(r=>r.json()).then(data=>{
 
   Graph.d3Force("charge").strength(-140);
   apply();
+  setTimeout(()=>{ if(!window.__fit){ window.__fit=true; Graph.zoomToFit(700,70); } }, 2500);
 });
 
 // controls
