@@ -91,6 +91,15 @@ Ingest는 반드시 **두 단계를 함께** 수행한다 (fetch만 하고 끝�
 ```
 연쇄 갱신이 없으면 "- Updated:" 줄 생략.
 
+### 5단계: 지식 그래프 갱신
+
+새 글에서 등장한 핵심 개념·주장·통찰·절차·사건·개체를 노드로, 그 사이 관계를 엣지로
+`wiki/graph/graph.json`에 추가한다. 스키마와 규칙은 아래 "지식 그래프" 절을 따른다.
+
+### 6단계: 웹 발행
+
+아래 "웹 발행" 절차로 사이트를 재배포한다.
+
 ---
 
 ## 작업 2: Query (질의)
@@ -151,6 +160,46 @@ Ingest는 반드시 **두 단계를 함께** 수행한다 (fetch만 하고 끝�
 `wiki/log.md`에 기록: `## [YYYY-MM-DD] lint | 발견 <N>건, 자동 수정 <M>건`
 
 ---
+
+## 지식 그래프 (Knowledge Graph)
+
+`wiki/graph/`에 인터랙티브 3D 지식 그래프가 있다 (`index.html` 뷰어 + `graph.json` 데이터).
+뷰어는 손대지 않아도 되고, **Ingest 때마다 `graph.json`만 갱신**하면 된다.
+
+`graph.json` 스키마:
+- `nodes[]`: `{ id, label, type, origin, topic, tags[], url, summary }`
+  - `type`: `concept`(개념/의미) · `insight`(통찰) · `claim`(주장) · `procedure`(절차) · `event`(사건) · `entity`(개체)
+  - `origin`: `external`(외부 자료에서 온 사실) · `mine`(위키가 합성한 통찰·교차연결)
+  - `topic`: 해당 wiki 주제 폴더명. 여러 주제를 잇는 노드는 `cross`.
+  - `url`: 그래프 페이지(`/graph/`) 기준 상대 경로. 보통 `../<topic>/<slug>/` (해당 wiki 글). cross는 `../`.
+  - `summary`: 한 줄 설명(한국어).
+- `links[]`: `{ source, target, type }`
+  - `type`: `support`(지지) · `extend`(확장) · `refute`(반박) · `related`(관련) · `part-of`(포함)
+
+규칙:
+- 새 글의 개념을 노드로 추가하고, **기존 노드와의 관계를 엣지로 잇는다**(특히 다른 토픽과의 연결).
+- 토픽을 가로지르는 통찰은 `origin:"mine"`, `topic:"cross"` 노드로 만들어 양쪽을 연결한다.
+- id는 짧고 고유하게(예: `km-llm-wiki`). 중복 금지.
+- 표준 JSON(주석 없음)을 유지한다.
+
+## 웹 발행 (Deploy)
+
+이 위키는 MkDocs Material로 빌드해 GitHub Pages(`gh-pages` 브랜치)로 발행한다.
+라이브: https://choonchoon-ai.github.io/choonbrain/ · 그래프: `/graph/`.
+
+wiki를 바꾸는 작업(Ingest·Archive·자동수정 Lint) 뒤에는 저장소 루트에서 재배포한다:
+
+```bash
+# 데스크톱(로컬 venv 있음):
+.venv/bin/mkdocs gh-deploy --force
+
+# mkdocs가 없으면(클라우드/웹 세션 등) 먼저 설치:
+pip install -q mkdocs-material && mkdocs gh-deploy --force
+```
+
+- `mkdocs.yml`의 `docs_dir: wiki` 설정으로 wiki/ 전체가 사이트가 된다. `wiki/graph/`의 html·json도 그대로 복사된다.
+- gh-deploy는 빌드 결과를 `gh-pages` 브랜치로 푸시한다(코드 변경 커밋은 별도로 main에 push).
+- `.github/workflows/`는 gitignore되어 있다(현재 토큰에 workflow 권한 없음). 자동배포 대신 위 명령으로 발행한다.
 
 ## 공통 규약
 
