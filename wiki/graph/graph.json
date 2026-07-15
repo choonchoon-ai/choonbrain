@@ -38,6 +38,16 @@
     { "id": "h-frameworks", "label": "도메인 프레임워크 내장", "type": "insight", "origin": "external", "topic": "ai-agents", "tags": ["에이전트"], "url": "../ai-agents/harness-100/", "summary": "SOLID·BMC·Bloom's 등 실전 방법론을 팀에 내장." },
     { "id": "h-prod-workflow", "label": "프로덕션급 워크플로우", "type": "claim", "origin": "external", "topic": "ai-agents", "tags": ["에이전트"], "url": "../ai-agents/harness-100/", "summary": "단발 프롬프트가 아닌 검증된 다단계 파이프라인." },
 
+    { "id": "as-stack", "label": "클로드 에이전트 스택(5세팅)", "type": "procedure", "origin": "external", "topic": "ai-agents", "tags": ["에이전트", "AI코딩"], "url": "../ai-agents/claude-agent-stack/", "summary": "클로드를 자율형 AI 팀으로 만드는 5단계 세팅 골격." },
+    { "id": "as-helena", "label": "헬레나(영상 화자)", "type": "entity", "origin": "external", "topic": "ai-agents", "tags": ["인물"], "url": "../ai-agents/claude-agent-stack/", "summary": "오픈소스 기술을 클로드에 이식해 자율형 AI 팀을 구축했다고 소개된 인물." },
+    { "id": "as-local-exec", "label": "로컬 실행환경(코워크)", "type": "procedure", "origin": "external", "topic": "ai-agents", "tags": ["에이전트", "AI코딩"], "url": "../ai-agents/claude-agent-stack/", "summary": "깃허브 저장소를 직접 클론·실행하는 로컬 엔진이 에이전트의 출발점." },
+    { "id": "as-parallel", "label": "병렬 다중 에이전트 토론", "type": "procedure", "origin": "external", "topic": "ai-agents", "tags": ["에이전트"], "url": "../ai-agents/claude-agent-stack/", "summary": "전문 에이전트 다수가 한 안건을 두고 토론해 사각지대를 제거." },
+    { "id": "as-social-research", "label": "실시간 소셜 리서치", "type": "procedure", "origin": "external", "topic": "ai-agents", "tags": ["에이전트", "리서치"], "url": "../ai-agents/claude-agent-stack/", "summary": "Reddit·X의 실제 사용자 반응을 URL 단위로 수집해 시장 보고서 생성." },
+    { "id": "as-virtual-org", "label": "가상 개발 조직(역할 에이전트)", "type": "procedure", "origin": "external", "topic": "ai-agents", "tags": ["에이전트"], "url": "../ai-agents/claude-agent-stack/", "summary": "CEO·엔지니어링 매니저 역할 에이전트가 기획~테스트를 스스로 처리." },
+    { "id": "as-slash", "label": "슬래시 명령어 캡슐화", "type": "procedure", "origin": "external", "topic": "ai-agents", "tags": ["에이전트", "AI코딩"], "url": "../ai-agents/claude-agent-stack/", "summary": "반복 워크플로우를 전용 슬래시 명령어로 캡슐화해 즉시 호출." },
+
+    { "id": "me-stack-vs-harness", "label": "스택=팀 세팅 골격, Harness=팀 템플릿", "type": "insight", "origin": "mine", "topic": "cross", "tags": ["에이전트"], "url": "../ai-agents/claude-agent-stack/", "summary": "영상의 5세팅은 에이전트 팀을 '세팅하는 골격', Harness 100은 '완성된 팀 템플릿'." },
+
     { "id": "me-brain-is-llmwiki", "label": "이 브레인 = LLM Wiki 실천", "type": "insight", "origin": "mine", "topic": "cross", "tags": ["지식관리"], "url": "../", "summary": "choonbrain 자체가 LLM Wiki 개념의 구현이다." },
     { "id": "me-kb-mirrors-brain", "label": "#64가 이 브레인과 동형", "type": "insight", "origin": "mine", "topic": "cross", "tags": ["지식관리", "에이전트"], "url": "../ai-agents/harness-100/", "summary": "knowledge-base-builder 하네스가 이 브레인 파이프라인과 같은 구조." },
     { "id": "me-ai-native-thread", "label": "'AI 네이티브'가 공통 축", "type": "insight", "origin": "mine", "topic": "cross", "tags": ["AI도구"], "url": "../", "summary": "알렉스·Harness100·Claude Code가 모두 'AI를 기본 도구로'라는 축을 공유." },
@@ -78,6 +88,21 @@
     { "source": "h-harness100", "target": "h-frameworks", "type": "extend" },
     { "source": "h-agent-team", "target": "h-prod-workflow", "type": "support" },
     { "source": "h-frameworks", "target": "h-prod-workflow", "type": "support" },
+
+    { "source": "as-stack", "target": "as-local-exec", "type": "part-of" },
+    { "source": "as-stack", "target": "as-parallel", "type": "part-of" },
+    { "source": "as-stack", "target": "as-social-research", "type": "part-of" },
+    { "source": "as-stack", "target": "as-virtual-org", "type": "part-of" },
+    { "source": "as-stack", "target": "as-slash", "type": "part-of" },
+    { "source": "as-helena", "target": "as-stack", "type": "support" },
+    { "source": "as-parallel", "target": "h-agent-team", "type": "related" },
+    { "source": "as-parallel", "target": "h-sendmessage", "type": "related" },
+    { "source": "as-slash", "target": "h-orchestrator", "type": "related" },
+    { "source": "as-local-exec", "target": "h-claude-code", "type": "support" },
+    { "source": "as-social-research", "target": "cc-loop-eng", "type": "related" },
+    { "source": "me-stack-vs-harness", "target": "as-stack", "type": "support" },
+    { "source": "me-stack-vs-harness", "target": "h-harness100", "type": "support" },
+    { "source": "me-ai-native-thread", "target": "as-stack", "type": "related" },
 
     { "source": "me-brain-is-llmwiki", "target": "km-llm-wiki", "type": "extend" },
     { "source": "me-kb-mirrors-brain", "target": "h-kb-builder", "type": "support" },

@@ -64,4 +64,5 @@ Harness 100은 **Claude Code의 에이전트 팀(agent team) 기능으로 도메
 
 ## See Also
 
+- [클로드 에이전트 스택 (자율형 AI 팀 5가지 세팅)](claude-agent-stack.md) — 이런 에이전트 팀을 세팅하는 5단계 골격
 - [LLM Wiki (LLM이 유지하는 지식 위키)](../knowledge-management/llm-wiki.md)
