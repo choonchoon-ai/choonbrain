@@ -11,3 +11,12 @@
 
 ## [2026-07-15] ingest | LLM 위키 실전 구축 (5대 빌딩블록 + 드림 시퀀스)
 - Updated: LLM Wiki (LLM이 유지하는 지식 위키)
+
+## [2026-07-15] ingest | AIMAX_PD 채널 전체 (69편) — 6개 주제 종합
+- New: AIMAX 세컨드브레인 제작 시리즈 (knowledge-management, 3편)
+- New: 클로드 코드로 AI 직원 만들기 (ai-agents, 8편)
+- New: AI 모델·도구 리뷰 (ai-tools, 5편)
+- New: 바이브코딩 실전 플레이북 (vibe-coding, 14편)
+- New: AI 수익화 플레이북 (ai-monetization, 14편)
+- New: DTC·마케팅 사례 모음 (marketing-cases, 25편)
+- Updated: 클로드 에이전트 스택; LLM 위키 실전 구축 (See Also 상호참조)

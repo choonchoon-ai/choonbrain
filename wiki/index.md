@@ -10,6 +10,7 @@
 |---------|---------|---------|
 | [LLM Wiki (LLM이 유지하는 지식 위키)](knowledge-management/llm-wiki.md) | LLM이 위키를 쓰고 유지하는 Karpathy식 지식 관리 개념과 RAG와의 차이 | 2026-07-15 |
 | [LLM 위키 실전 구축 (5대 빌딩블록 + 드림 시퀀스)](knowledge-management/llm-wiki-build-guide.md) | 클로드 코드로 제2의 뇌를 구축·운영하는 실전 레시피(Raw·Wiki·Outputs·claw.md·드림 시퀀스)와 이 저장소 구조와의 대조 | 2026-07-15 |
+| [AIMAX 세컨드브레인 제작 시리즈](knowledge-management/aimax-second-brain-series.md) | AIMAX_PD 세컨드브레인 3부작 종합 — 노드 분할·핫 캐시·5개 운영 명령어·옵시디언 ACE 프레임워크 | 2026-07-15 |
 
 ## ai-native-careers
 
@@ -27,3 +28,36 @@ AI 에이전트 팀·오케스트레이션과 Claude Code 기반 워크플로우
 |---------|---------|---------|
 | [Harness 100 (에이전트 팀 하네스 컬렉션)](ai-agents/harness-100.md) | Claude Code 에이전트 팀으로 4~5명 전문가가 협업하는 10개 카테고리·100개 프로덕션 워크플로우 오픈소스 모음 | 2026-07-14 |
 | [클로드 에이전트 스택 (자율형 AI 팀 5가지 세팅)](ai-agents/claude-agent-stack.md) | 클로드를 자율형 AI 팀으로 세팅하는 5단계 골격(로컬 실행·병렬 다중에이전트·소셜 리서치·가상 개발조직·슬래시 명령어) | 2026-07-15 |
+| [클로드 코드로 AI 직원 만들기 (AIMAX 팁 모음)](ai-agents/claude-code-ai-employees.md) | 프롬프트 기법(인터뷰·다각도검토·문서체인)·스킬/learnings.md 자가진화·Cowork 31스킬로 광고·고객센터·콘텐츠·웹디자인 직무를 클로드에 맡기는 실전 팁 종합 | 2026-07-15 |
+
+## ai-tools
+
+AI 모델·도구 리뷰와 비교 — 어떤 도구를 언제 쓸지 판단하는 실무 관점.
+
+| Article | Summary | Updated |
+|---------|---------|---------|
+| [AI 모델·도구 리뷰 (AIMAX 채널)](ai-tools/ai-model-tool-reviews.md) | NotebookLM·Claude Fable5·ChatGPT 5.6·오픈소스 5종을 종합한 AI 도구 리뷰 — 스킬·메모리·에이전트로 수렴하는 흐름과 유료 SaaS의 로컬 대체 | 2026-07-15 |
+
+## vibe-coding
+
+클로드/AI로 앱·콘텐츠·디자인·실물상품을 만들어 수익화하는 "바이브코딩" 실전.
+
+| Article | Summary | Updated |
+|---------|---------|---------|
+| [바이브코딩 실전 플레이북 (AIMAX 채널)](vibe-coding/vibe-coding-playbook.md) | 클로드로 앱·콘텐츠·디자인·실물상품을 만들어 수익화하는 AIMAX_PD 14편의 워크플로우를 4개 주제로 종합(홍보성 수익 주장은 낮춤) | 2026-07-15 |
+
+## ai-monetization
+
+AI로 수익화·부업·창업하는 방법론 — 실행 가능한 원리 중심(과대광고 주의).
+
+| Article | Summary | Updated |
+|---------|---------|---------|
+| [AI 수익화 플레이북 (AIMAX 채널)](ai-monetization/ai-monetization-playbook.md) | AIMAX_PD 14편을 수요검증→모델선택→AI제작→빌드인퍼블릭→자동화 5단계로 통합한 AI 창업·부업 방법론(과대광고 주의 포함) | 2026-07-15 |
+
+## marketing-cases
+
+제품·브랜드 마케팅 성공 사례에서 뽑은 반복 원리(DTC·세일즈·콘텐츠 심리).
+
+| Article | Summary | Updated |
+|---------|---------|---------|
+| [DTC·마케팅 사례 모음 (AIMAX 채널)](marketing-cases/dtc-marketing-cases.md) | AIMAX_PD 마케팅 쇼츠 25편을 뾰족한 타겟팅·차별점 하나·리프레이밍·인플루언서 신뢰·틈새/화이트스페이스·창업자 스토리텔링 등 13개 반복 원리로 종합(개별 사례는 추적표로 보존) | 2026-07-15 |

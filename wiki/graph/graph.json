@@ -5,142 +5,2532 @@
     "note": "wiki/ 글에서 추출·합성한 노드와 관계. ingest 시마다 갱신된다."
   },
   "nodes": [
-    { "id": "km-llm-wiki", "label": "LLM Wiki", "type": "concept", "origin": "external", "topic": "knowledge-management", "tags": ["지식관리", "LLM"], "url": "../knowledge-management/llm-wiki/", "summary": "LLM이 쓰고 유지하는 마크다운 지식 위키." },
-    { "id": "km-ingest-synthesis", "label": "수집 시점 합성", "type": "concept", "origin": "external", "topic": "knowledge-management", "tags": ["지식관리"], "url": "../knowledge-management/llm-wiki/", "summary": "질문마다가 아니라 자료가 들어올 때 지식을 합성해 저장한다." },
-    { "id": "km-rag", "label": "RAG", "type": "concept", "origin": "external", "topic": "knowledge-management", "tags": ["LLM"], "url": "../knowledge-management/llm-wiki/", "summary": "질문마다 원문을 검색·합성하는 방식." },
-    { "id": "km-vs-rag", "label": "RAG 대신 사전 합성", "type": "claim", "origin": "external", "topic": "knowledge-management", "tags": ["지식관리", "LLM"], "url": "../knowledge-management/llm-wiki/", "summary": "매번 검색하지 않고 ingest 때 지식을 합성해 둔다." },
-    { "id": "km-compounding", "label": "지식의 복리화", "type": "insight", "origin": "external", "topic": "knowledge-management", "tags": ["지식관리"], "url": "../knowledge-management/llm-wiki/", "summary": "새 자료마다 요약·상호참조·인덱스를 갱신해 지식이 축적된다." },
-    { "id": "km-cascade", "label": "연쇄 갱신(Cascade)", "type": "procedure", "origin": "external", "topic": "knowledge-management", "tags": ["지식관리"], "url": "../knowledge-management/llm-wiki/", "summary": "새 자료가 기존 글·인덱스에 미치는 영향을 갱신." },
-    { "id": "km-llm-writes", "label": "LLM이 쓰고 사람은 읽는다", "type": "claim", "origin": "external", "topic": "knowledge-management", "tags": ["지식관리"], "url": "../knowledge-management/llm-wiki/", "summary": "핵심 원칙: LLM이 위키를 유지하고 사람은 질문한다." },
-    { "id": "km-karpathy", "label": "Andrej Karpathy", "type": "entity", "origin": "external", "topic": "knowledge-management", "tags": ["인물"], "url": "../knowledge-management/llm-wiki/", "summary": "LLM Wiki 개념의 출처." },
-
-    { "id": "bg-build-guide", "label": "LLM 위키 실전 구축", "type": "procedure", "origin": "external", "topic": "knowledge-management", "tags": ["지식관리", "AI코딩"], "url": "../knowledge-management/llm-wiki-build-guide/", "summary": "클로드 코드로 제2의 뇌를 프롬프트 하나로 구축·운영하는 레시피." },
-    { "id": "bg-5blocks", "label": "5대 빌딩블록", "type": "concept", "origin": "external", "topic": "knowledge-management", "tags": ["지식관리"], "url": "../knowledge-management/llm-wiki-build-guide/", "summary": "Raw·Wiki(Index/Log)·Outputs·claw.md·Dream Sequence." },
-    { "id": "bg-clawmd", "label": "claw.md (운영 매뉴얼)", "type": "concept", "origin": "external", "topic": "knowledge-management", "tags": ["지식관리"], "url": "../knowledge-management/llm-wiki-build-guide/", "summary": "AI가 스스로 갱신하는 시스템 운영 규칙(OS). 이 브레인의 SKILL/CLAUDE.md에 해당." },
-    { "id": "bg-dream", "label": "드림 시퀀스(자가 진단)", "type": "procedure", "origin": "external", "topic": "knowledge-management", "tags": ["지식관리"], "url": "../knowledge-management/llm-wiki-build-guide/", "summary": "주기 실행으로 모순·중복·낡은 정보를 점검·최신화하는 '건강 검진'." },
-    { "id": "bg-processed", "label": "Processed.md 추적", "type": "procedure", "origin": "external", "topic": "knowledge-management", "tags": ["지식관리"], "url": "../knowledge-management/llm-wiki-build-guide/", "summary": "통합된 파일을 기록해 중복 작업 방지." },
-    { "id": "bg-mobile-ingest", "label": "모바일 '저장해줘' 주입", "type": "procedure", "origin": "external", "topic": "knowledge-management", "tags": ["지식관리", "AI도구"], "url": "../knowledge-management/llm-wiki-build-guide/", "summary": "공유 기능으로 링크 보내고 한 줄이면 자동 Ingest+위키 갱신." },
-    { "id": "bg-self-evolving", "label": "자가 진화형 지식체", "type": "insight", "origin": "external", "topic": "knowledge-management", "tags": ["지식관리"], "url": "../knowledge-management/llm-wiki-build-guide/", "summary": "대화의 일회성 소비를 복리 자산으로 전환; 유기체처럼 스스로 학습." },
-    { "id": "me-dream-is-lint", "label": "드림 시퀀스 = 이 브레인의 Lint", "type": "insight", "origin": "mine", "topic": "cross", "tags": ["지식관리"], "url": "../knowledge-management/llm-wiki-build-guide/", "summary": "영상의 드림 시퀀스는 이 저장소의 Lint 작업에 해당하나 아직 스케줄 자동화가 없다." },
-
-    { "id": "cc-alex", "label": "커리어해커 알렉스(안상현)", "type": "entity", "origin": "external", "topic": "ai-native-careers", "tags": ["인물", "커리어"], "url": "../ai-native-careers/careerhackeralex/", "summary": "실리콘밸리 Meta 스태프 엔지니어이자 유튜버." },
-    { "id": "cc-meta", "label": "Meta / 인스타그램", "type": "entity", "origin": "external", "topic": "ai-native-careers", "tags": ["회사"], "url": "../ai-native-careers/careerhackeralex/", "summary": "알렉스가 광고 인프라 팀에서 근무." },
-    { "id": "cc-solopreneur", "label": "솔로프리너", "type": "concept", "origin": "external", "topic": "ai-native-careers", "tags": ["커리어전략", "1인사업"], "url": "../ai-native-careers/careerhackeralex/", "summary": "AI로 혼자 사업을 운영하는 1인 사업가." },
-    { "id": "cc-ai-native", "label": "AI 네이티브", "type": "concept", "origin": "external", "topic": "ai-native-careers", "tags": ["AI도구", "커리어전략"], "url": "../ai-native-careers/careerhackeralex/", "summary": "AI를 기본 도구로 삼는 일하는 방식." },
-    { "id": "cc-action", "label": "두려움보다 행동력", "type": "insight", "origin": "external", "topic": "ai-native-careers", "tags": ["커리어전략"], "url": "../ai-native-careers/careerhackeralex/", "summary": "알렉스의 세 활동 철학 중 하나." },
-    { "id": "cc-loop-eng", "label": "루프 엔지니어링", "type": "concept", "origin": "external", "topic": "ai-native-careers", "tags": ["AI코딩", "AI도구"], "url": "../ai-native-careers/careerhackeralex/", "summary": "AI를 반복 루프로 돌려 산출물을 만드는 실무 기법." },
-    { "id": "cc-meta-nocode", "label": "메타 개발자는 코딩을 거의 안 한다", "type": "claim", "origin": "external", "topic": "ai-native-careers", "tags": ["커리어"], "url": "../ai-native-careers/careerhackeralex/", "summary": "빅테크 시니어의 일은 코딩보다 정렬·판 깔기." },
-    { "id": "cc-ax-war", "label": "AX 인재 전쟁", "type": "event", "origin": "external", "topic": "ai-native-careers", "tags": ["커리어전략"], "url": "../ai-native-careers/careerhackeralex/", "summary": "AI 전환 시대의 인재 경쟁; 생존 조건 콘텐츠." },
-    { "id": "cc-pankkalgi", "label": "결국 판 깔기다", "type": "insight", "origin": "external", "topic": "ai-native-careers", "tags": ["커리어전략"], "url": "../ai-native-careers/careerhackeralex/", "summary": "AI 시대 생존 = 판(구조)을 만드는 능력." },
-    { "id": "cc-nondev", "label": "비개발자도 AI를 무기로", "type": "claim", "origin": "external", "topic": "ai-native-careers", "tags": ["AI도구"], "url": "../ai-native-careers/careerhackeralex/", "summary": "비개발자도 AI로 혼자 사업을 운영할 수 있다." },
-    { "id": "cc-course", "label": "AI 네이티브 강의(12h)", "type": "procedure", "origin": "external", "topic": "ai-native-careers", "tags": ["교육"], "url": "../ai-native-careers/careerhackeralex/", "summary": "2026 여름 공개 예정 부트캠프." },
-
-    { "id": "h-harness100", "label": "Harness 100", "type": "entity", "origin": "external", "topic": "ai-agents", "tags": ["에이전트", "오픈소스"], "url": "../ai-agents/harness-100/", "summary": "에이전트 팀 하네스 100개 모음(Apache 2.0)." },
-    { "id": "h-harness", "label": "하네스(harness)", "type": "concept", "origin": "external", "topic": "ai-agents", "tags": ["에이전트"], "url": "../ai-agents/harness-100/", "summary": "목표를 위한 에이전트 팀 + 오케스트레이터 스킬 묶음." },
-    { "id": "h-agent-team", "label": "에이전트 팀", "type": "concept", "origin": "external", "topic": "ai-agents", "tags": ["에이전트", "AI코딩"], "url": "../ai-agents/harness-100/", "summary": "전문가 에이전트 4~5명이 협업하는 구성." },
-    { "id": "h-sendmessage", "label": "SendMessage 교차검증", "type": "procedure", "origin": "external", "topic": "ai-agents", "tags": ["에이전트"], "url": "../ai-agents/harness-100/", "summary": "에이전트끼리 직접 통신하며 산출물을 교차 검증." },
-    { "id": "h-orchestrator", "label": "오케스트레이터 스킬", "type": "concept", "origin": "external", "topic": "ai-agents", "tags": ["에이전트"], "url": "../ai-agents/harness-100/", "summary": "에이전트 팀을 지휘하는 스킬." },
-    { "id": "h-copy-use", "label": "복사해서 바로 사용", "type": "procedure", "origin": "external", "topic": "ai-agents", "tags": ["에이전트"], "url": "../ai-agents/harness-100/", "summary": ".claude/ 폴더를 복사해 프로젝트에 이식." },
-    { "id": "h-claude-code", "label": "Claude Code", "type": "entity", "origin": "external", "topic": "ai-agents", "tags": ["AI도구", "AI코딩"], "url": "../ai-agents/harness-100/", "summary": "에이전트 팀 기능의 기반 도구." },
-    { "id": "h-kb-builder", "label": "#64 knowledge-base-builder", "type": "concept", "origin": "external", "topic": "ai-agents", "tags": ["지식관리", "에이전트"], "url": "../ai-agents/harness-100/", "summary": "수집→마크다운위키→검색인덱스 지식관리 하네스." },
-    { "id": "h-llm-app", "label": "#41 llm-app-builder", "type": "concept", "origin": "external", "topic": "ai-agents", "tags": ["LLM", "에이전트"], "url": "../ai-agents/harness-100/", "summary": "프롬프트→RAG→평가→최적화→배포." },
-    { "id": "h-frameworks", "label": "도메인 프레임워크 내장", "type": "insight", "origin": "external", "topic": "ai-agents", "tags": ["에이전트"], "url": "../ai-agents/harness-100/", "summary": "SOLID·BMC·Bloom's 등 실전 방법론을 팀에 내장." },
-    { "id": "h-prod-workflow", "label": "프로덕션급 워크플로우", "type": "claim", "origin": "external", "topic": "ai-agents", "tags": ["에이전트"], "url": "../ai-agents/harness-100/", "summary": "단발 프롬프트가 아닌 검증된 다단계 파이프라인." },
-
-    { "id": "as-stack", "label": "클로드 에이전트 스택(5세팅)", "type": "procedure", "origin": "external", "topic": "ai-agents", "tags": ["에이전트", "AI코딩"], "url": "../ai-agents/claude-agent-stack/", "summary": "클로드를 자율형 AI 팀으로 만드는 5단계 세팅 골격." },
-    { "id": "as-helena", "label": "헬레나(영상 화자)", "type": "entity", "origin": "external", "topic": "ai-agents", "tags": ["인물"], "url": "../ai-agents/claude-agent-stack/", "summary": "오픈소스 기술을 클로드에 이식해 자율형 AI 팀을 구축했다고 소개된 인물." },
-    { "id": "as-local-exec", "label": "로컬 실행환경(코워크)", "type": "procedure", "origin": "external", "topic": "ai-agents", "tags": ["에이전트", "AI코딩"], "url": "../ai-agents/claude-agent-stack/", "summary": "깃허브 저장소를 직접 클론·실행하는 로컬 엔진이 에이전트의 출발점." },
-    { "id": "as-parallel", "label": "병렬 다중 에이전트 토론", "type": "procedure", "origin": "external", "topic": "ai-agents", "tags": ["에이전트"], "url": "../ai-agents/claude-agent-stack/", "summary": "전문 에이전트 다수가 한 안건을 두고 토론해 사각지대를 제거." },
-    { "id": "as-social-research", "label": "실시간 소셜 리서치", "type": "procedure", "origin": "external", "topic": "ai-agents", "tags": ["에이전트", "리서치"], "url": "../ai-agents/claude-agent-stack/", "summary": "Reddit·X의 실제 사용자 반응을 URL 단위로 수집해 시장 보고서 생성." },
-    { "id": "as-virtual-org", "label": "가상 개발 조직(역할 에이전트)", "type": "procedure", "origin": "external", "topic": "ai-agents", "tags": ["에이전트"], "url": "../ai-agents/claude-agent-stack/", "summary": "CEO·엔지니어링 매니저 역할 에이전트가 기획~테스트를 스스로 처리." },
-    { "id": "as-slash", "label": "슬래시 명령어 캡슐화", "type": "procedure", "origin": "external", "topic": "ai-agents", "tags": ["에이전트", "AI코딩"], "url": "../ai-agents/claude-agent-stack/", "summary": "반복 워크플로우를 전용 슬래시 명령어로 캡슐화해 즉시 호출." },
-
-    { "id": "me-stack-vs-harness", "label": "스택=팀 세팅 골격, Harness=팀 템플릿", "type": "insight", "origin": "mine", "topic": "cross", "tags": ["에이전트"], "url": "../ai-agents/claude-agent-stack/", "summary": "영상의 5세팅은 에이전트 팀을 '세팅하는 골격', Harness 100은 '완성된 팀 템플릿'." },
-
-    { "id": "me-brain-is-llmwiki", "label": "이 브레인 = LLM Wiki 실천", "type": "insight", "origin": "mine", "topic": "cross", "tags": ["지식관리"], "url": "../", "summary": "choonbrain 자체가 LLM Wiki 개념의 구현이다." },
-    { "id": "me-kb-mirrors-brain", "label": "#64가 이 브레인과 동형", "type": "insight", "origin": "mine", "topic": "cross", "tags": ["지식관리", "에이전트"], "url": "../ai-agents/harness-100/", "summary": "knowledge-base-builder 하네스가 이 브레인 파이프라인과 같은 구조." },
-    { "id": "me-ai-native-thread", "label": "'AI 네이티브'가 공통 축", "type": "insight", "origin": "mine", "topic": "cross", "tags": ["AI도구"], "url": "../", "summary": "알렉스·Harness100·Claude Code가 모두 'AI를 기본 도구로'라는 축을 공유." },
-    { "id": "me-loop-vs-agentteam", "label": "루프 엔지니어링 ↔ 에이전트 팀", "type": "insight", "origin": "mine", "topic": "cross", "tags": ["AI코딩", "에이전트"], "url": "../", "summary": "알렉스의 루프 실무와 하네스의 팀 오케스트레이션은 같은 문제의 다른 접근." },
-    { "id": "me-ragdebate", "label": "RAG 논쟁 접점", "type": "insight", "origin": "mine", "topic": "cross", "tags": ["LLM"], "url": "../", "summary": "LLM Wiki의 사전합성 주장과 llm-app-builder의 RAG가 대비된다." }
+    {
+      "id": "km-llm-wiki",
+      "label": "LLM Wiki",
+      "type": "concept",
+      "origin": "external",
+      "topic": "knowledge-management",
+      "tags": [
+        "지식관리",
+        "LLM"
+      ],
+      "url": "../knowledge-management/llm-wiki/",
+      "summary": "LLM이 쓰고 유지하는 마크다운 지식 위키."
+    },
+    {
+      "id": "km-ingest-synthesis",
+      "label": "수집 시점 합성",
+      "type": "concept",
+      "origin": "external",
+      "topic": "knowledge-management",
+      "tags": [
+        "지식관리"
+      ],
+      "url": "../knowledge-management/llm-wiki/",
+      "summary": "질문마다가 아니라 자료가 들어올 때 지식을 합성해 저장한다."
+    },
+    {
+      "id": "km-rag",
+      "label": "RAG",
+      "type": "concept",
+      "origin": "external",
+      "topic": "knowledge-management",
+      "tags": [
+        "LLM"
+      ],
+      "url": "../knowledge-management/llm-wiki/",
+      "summary": "질문마다 원문을 검색·합성하는 방식."
+    },
+    {
+      "id": "km-vs-rag",
+      "label": "RAG 대신 사전 합성",
+      "type": "claim",
+      "origin": "external",
+      "topic": "knowledge-management",
+      "tags": [
+        "지식관리",
+        "LLM"
+      ],
+      "url": "../knowledge-management/llm-wiki/",
+      "summary": "매번 검색하지 않고 ingest 때 지식을 합성해 둔다."
+    },
+    {
+      "id": "km-compounding",
+      "label": "지식의 복리화",
+      "type": "insight",
+      "origin": "external",
+      "topic": "knowledge-management",
+      "tags": [
+        "지식관리"
+      ],
+      "url": "../knowledge-management/llm-wiki/",
+      "summary": "새 자료마다 요약·상호참조·인덱스를 갱신해 지식이 축적된다."
+    },
+    {
+      "id": "km-cascade",
+      "label": "연쇄 갱신(Cascade)",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "knowledge-management",
+      "tags": [
+        "지식관리"
+      ],
+      "url": "../knowledge-management/llm-wiki/",
+      "summary": "새 자료가 기존 글·인덱스에 미치는 영향을 갱신."
+    },
+    {
+      "id": "km-llm-writes",
+      "label": "LLM이 쓰고 사람은 읽는다",
+      "type": "claim",
+      "origin": "external",
+      "topic": "knowledge-management",
+      "tags": [
+        "지식관리"
+      ],
+      "url": "../knowledge-management/llm-wiki/",
+      "summary": "핵심 원칙: LLM이 위키를 유지하고 사람은 질문한다."
+    },
+    {
+      "id": "km-karpathy",
+      "label": "Andrej Karpathy",
+      "type": "entity",
+      "origin": "external",
+      "topic": "knowledge-management",
+      "tags": [
+        "인물"
+      ],
+      "url": "../knowledge-management/llm-wiki/",
+      "summary": "LLM Wiki 개념의 출처."
+    },
+    {
+      "id": "bg-build-guide",
+      "label": "LLM 위키 실전 구축",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "knowledge-management",
+      "tags": [
+        "지식관리",
+        "AI코딩"
+      ],
+      "url": "../knowledge-management/llm-wiki-build-guide/",
+      "summary": "클로드 코드로 제2의 뇌를 프롬프트 하나로 구축·운영하는 레시피."
+    },
+    {
+      "id": "bg-5blocks",
+      "label": "5대 빌딩블록",
+      "type": "concept",
+      "origin": "external",
+      "topic": "knowledge-management",
+      "tags": [
+        "지식관리"
+      ],
+      "url": "../knowledge-management/llm-wiki-build-guide/",
+      "summary": "Raw·Wiki(Index/Log)·Outputs·claw.md·Dream Sequence."
+    },
+    {
+      "id": "bg-clawmd",
+      "label": "claw.md (운영 매뉴얼)",
+      "type": "concept",
+      "origin": "external",
+      "topic": "knowledge-management",
+      "tags": [
+        "지식관리"
+      ],
+      "url": "../knowledge-management/llm-wiki-build-guide/",
+      "summary": "AI가 스스로 갱신하는 시스템 운영 규칙(OS). 이 브레인의 SKILL/CLAUDE.md에 해당."
+    },
+    {
+      "id": "bg-dream",
+      "label": "드림 시퀀스(자가 진단)",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "knowledge-management",
+      "tags": [
+        "지식관리"
+      ],
+      "url": "../knowledge-management/llm-wiki-build-guide/",
+      "summary": "주기 실행으로 모순·중복·낡은 정보를 점검·최신화하는 '건강 검진'."
+    },
+    {
+      "id": "bg-processed",
+      "label": "Processed.md 추적",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "knowledge-management",
+      "tags": [
+        "지식관리"
+      ],
+      "url": "../knowledge-management/llm-wiki-build-guide/",
+      "summary": "통합된 파일을 기록해 중복 작업 방지."
+    },
+    {
+      "id": "bg-mobile-ingest",
+      "label": "모바일 '저장해줘' 주입",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "knowledge-management",
+      "tags": [
+        "지식관리",
+        "AI도구"
+      ],
+      "url": "../knowledge-management/llm-wiki-build-guide/",
+      "summary": "공유 기능으로 링크 보내고 한 줄이면 자동 Ingest+위키 갱신."
+    },
+    {
+      "id": "bg-self-evolving",
+      "label": "자가 진화형 지식체",
+      "type": "insight",
+      "origin": "external",
+      "topic": "knowledge-management",
+      "tags": [
+        "지식관리"
+      ],
+      "url": "../knowledge-management/llm-wiki-build-guide/",
+      "summary": "대화의 일회성 소비를 복리 자산으로 전환; 유기체처럼 스스로 학습."
+    },
+    {
+      "id": "me-dream-is-lint",
+      "label": "드림 시퀀스 = 이 브레인의 Lint",
+      "type": "insight",
+      "origin": "mine",
+      "topic": "cross",
+      "tags": [
+        "지식관리"
+      ],
+      "url": "../knowledge-management/llm-wiki-build-guide/",
+      "summary": "영상의 드림 시퀀스는 이 저장소의 Lint 작업에 해당하나 아직 스케줄 자동화가 없다."
+    },
+    {
+      "id": "cc-alex",
+      "label": "커리어해커 알렉스(안상현)",
+      "type": "entity",
+      "origin": "external",
+      "topic": "ai-native-careers",
+      "tags": [
+        "인물",
+        "커리어"
+      ],
+      "url": "../ai-native-careers/careerhackeralex/",
+      "summary": "실리콘밸리 Meta 스태프 엔지니어이자 유튜버."
+    },
+    {
+      "id": "cc-meta",
+      "label": "Meta / 인스타그램",
+      "type": "entity",
+      "origin": "external",
+      "topic": "ai-native-careers",
+      "tags": [
+        "회사"
+      ],
+      "url": "../ai-native-careers/careerhackeralex/",
+      "summary": "알렉스가 광고 인프라 팀에서 근무."
+    },
+    {
+      "id": "cc-solopreneur",
+      "label": "솔로프리너",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-native-careers",
+      "tags": [
+        "커리어전략",
+        "1인사업"
+      ],
+      "url": "../ai-native-careers/careerhackeralex/",
+      "summary": "AI로 혼자 사업을 운영하는 1인 사업가."
+    },
+    {
+      "id": "cc-ai-native",
+      "label": "AI 네이티브",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-native-careers",
+      "tags": [
+        "AI도구",
+        "커리어전략"
+      ],
+      "url": "../ai-native-careers/careerhackeralex/",
+      "summary": "AI를 기본 도구로 삼는 일하는 방식."
+    },
+    {
+      "id": "cc-action",
+      "label": "두려움보다 행동력",
+      "type": "insight",
+      "origin": "external",
+      "topic": "ai-native-careers",
+      "tags": [
+        "커리어전략"
+      ],
+      "url": "../ai-native-careers/careerhackeralex/",
+      "summary": "알렉스의 세 활동 철학 중 하나."
+    },
+    {
+      "id": "cc-loop-eng",
+      "label": "루프 엔지니어링",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-native-careers",
+      "tags": [
+        "AI코딩",
+        "AI도구"
+      ],
+      "url": "../ai-native-careers/careerhackeralex/",
+      "summary": "AI를 반복 루프로 돌려 산출물을 만드는 실무 기법."
+    },
+    {
+      "id": "cc-meta-nocode",
+      "label": "메타 개발자는 코딩을 거의 안 한다",
+      "type": "claim",
+      "origin": "external",
+      "topic": "ai-native-careers",
+      "tags": [
+        "커리어"
+      ],
+      "url": "../ai-native-careers/careerhackeralex/",
+      "summary": "빅테크 시니어의 일은 코딩보다 정렬·판 깔기."
+    },
+    {
+      "id": "cc-ax-war",
+      "label": "AX 인재 전쟁",
+      "type": "event",
+      "origin": "external",
+      "topic": "ai-native-careers",
+      "tags": [
+        "커리어전략"
+      ],
+      "url": "../ai-native-careers/careerhackeralex/",
+      "summary": "AI 전환 시대의 인재 경쟁; 생존 조건 콘텐츠."
+    },
+    {
+      "id": "cc-pankkalgi",
+      "label": "결국 판 깔기다",
+      "type": "insight",
+      "origin": "external",
+      "topic": "ai-native-careers",
+      "tags": [
+        "커리어전략"
+      ],
+      "url": "../ai-native-careers/careerhackeralex/",
+      "summary": "AI 시대 생존 = 판(구조)을 만드는 능력."
+    },
+    {
+      "id": "cc-nondev",
+      "label": "비개발자도 AI를 무기로",
+      "type": "claim",
+      "origin": "external",
+      "topic": "ai-native-careers",
+      "tags": [
+        "AI도구"
+      ],
+      "url": "../ai-native-careers/careerhackeralex/",
+      "summary": "비개발자도 AI로 혼자 사업을 운영할 수 있다."
+    },
+    {
+      "id": "cc-course",
+      "label": "AI 네이티브 강의(12h)",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-native-careers",
+      "tags": [
+        "교육"
+      ],
+      "url": "../ai-native-careers/careerhackeralex/",
+      "summary": "2026 여름 공개 예정 부트캠프."
+    },
+    {
+      "id": "h-harness100",
+      "label": "Harness 100",
+      "type": "entity",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "에이전트",
+        "오픈소스"
+      ],
+      "url": "../ai-agents/harness-100/",
+      "summary": "에이전트 팀 하네스 100개 모음(Apache 2.0)."
+    },
+    {
+      "id": "h-harness",
+      "label": "하네스(harness)",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "에이전트"
+      ],
+      "url": "../ai-agents/harness-100/",
+      "summary": "목표를 위한 에이전트 팀 + 오케스트레이터 스킬 묶음."
+    },
+    {
+      "id": "h-agent-team",
+      "label": "에이전트 팀",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "에이전트",
+        "AI코딩"
+      ],
+      "url": "../ai-agents/harness-100/",
+      "summary": "전문가 에이전트 4~5명이 협업하는 구성."
+    },
+    {
+      "id": "h-sendmessage",
+      "label": "SendMessage 교차검증",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "에이전트"
+      ],
+      "url": "../ai-agents/harness-100/",
+      "summary": "에이전트끼리 직접 통신하며 산출물을 교차 검증."
+    },
+    {
+      "id": "h-orchestrator",
+      "label": "오케스트레이터 스킬",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "에이전트"
+      ],
+      "url": "../ai-agents/harness-100/",
+      "summary": "에이전트 팀을 지휘하는 스킬."
+    },
+    {
+      "id": "h-copy-use",
+      "label": "복사해서 바로 사용",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "에이전트"
+      ],
+      "url": "../ai-agents/harness-100/",
+      "summary": ".claude/ 폴더를 복사해 프로젝트에 이식."
+    },
+    {
+      "id": "h-claude-code",
+      "label": "Claude Code",
+      "type": "entity",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "AI도구",
+        "AI코딩"
+      ],
+      "url": "../ai-agents/harness-100/",
+      "summary": "에이전트 팀 기능의 기반 도구."
+    },
+    {
+      "id": "h-kb-builder",
+      "label": "#64 knowledge-base-builder",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "지식관리",
+        "에이전트"
+      ],
+      "url": "../ai-agents/harness-100/",
+      "summary": "수집→마크다운위키→검색인덱스 지식관리 하네스."
+    },
+    {
+      "id": "h-llm-app",
+      "label": "#41 llm-app-builder",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "LLM",
+        "에이전트"
+      ],
+      "url": "../ai-agents/harness-100/",
+      "summary": "프롬프트→RAG→평가→최적화→배포."
+    },
+    {
+      "id": "h-frameworks",
+      "label": "도메인 프레임워크 내장",
+      "type": "insight",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "에이전트"
+      ],
+      "url": "../ai-agents/harness-100/",
+      "summary": "SOLID·BMC·Bloom's 등 실전 방법론을 팀에 내장."
+    },
+    {
+      "id": "h-prod-workflow",
+      "label": "프로덕션급 워크플로우",
+      "type": "claim",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "에이전트"
+      ],
+      "url": "../ai-agents/harness-100/",
+      "summary": "단발 프롬프트가 아닌 검증된 다단계 파이프라인."
+    },
+    {
+      "id": "as-stack",
+      "label": "클로드 에이전트 스택(5세팅)",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "에이전트",
+        "AI코딩"
+      ],
+      "url": "../ai-agents/claude-agent-stack/",
+      "summary": "클로드를 자율형 AI 팀으로 만드는 5단계 세팅 골격."
+    },
+    {
+      "id": "as-helena",
+      "label": "헬레나(영상 화자)",
+      "type": "entity",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "인물"
+      ],
+      "url": "../ai-agents/claude-agent-stack/",
+      "summary": "오픈소스 기술을 클로드에 이식해 자율형 AI 팀을 구축했다고 소개된 인물."
+    },
+    {
+      "id": "as-local-exec",
+      "label": "로컬 실행환경(코워크)",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "에이전트",
+        "AI코딩"
+      ],
+      "url": "../ai-agents/claude-agent-stack/",
+      "summary": "깃허브 저장소를 직접 클론·실행하는 로컬 엔진이 에이전트의 출발점."
+    },
+    {
+      "id": "as-parallel",
+      "label": "병렬 다중 에이전트 토론",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "에이전트"
+      ],
+      "url": "../ai-agents/claude-agent-stack/",
+      "summary": "전문 에이전트 다수가 한 안건을 두고 토론해 사각지대를 제거."
+    },
+    {
+      "id": "as-social-research",
+      "label": "실시간 소셜 리서치",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "에이전트",
+        "리서치"
+      ],
+      "url": "../ai-agents/claude-agent-stack/",
+      "summary": "Reddit·X의 실제 사용자 반응을 URL 단위로 수집해 시장 보고서 생성."
+    },
+    {
+      "id": "as-virtual-org",
+      "label": "가상 개발 조직(역할 에이전트)",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "에이전트"
+      ],
+      "url": "../ai-agents/claude-agent-stack/",
+      "summary": "CEO·엔지니어링 매니저 역할 에이전트가 기획~테스트를 스스로 처리."
+    },
+    {
+      "id": "as-slash",
+      "label": "슬래시 명령어 캡슐화",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "에이전트",
+        "AI코딩"
+      ],
+      "url": "../ai-agents/claude-agent-stack/",
+      "summary": "반복 워크플로우를 전용 슬래시 명령어로 캡슐화해 즉시 호출."
+    },
+    {
+      "id": "me-stack-vs-harness",
+      "label": "스택=팀 세팅 골격, Harness=팀 템플릿",
+      "type": "insight",
+      "origin": "mine",
+      "topic": "cross",
+      "tags": [
+        "에이전트"
+      ],
+      "url": "../ai-agents/claude-agent-stack/",
+      "summary": "영상의 5세팅은 에이전트 팀을 '세팅하는 골격', Harness 100은 '완성된 팀 템플릿'."
+    },
+    {
+      "id": "me-brain-is-llmwiki",
+      "label": "이 브레인 = LLM Wiki 실천",
+      "type": "insight",
+      "origin": "mine",
+      "topic": "cross",
+      "tags": [
+        "지식관리"
+      ],
+      "url": "../",
+      "summary": "choonbrain 자체가 LLM Wiki 개념의 구현이다."
+    },
+    {
+      "id": "me-kb-mirrors-brain",
+      "label": "#64가 이 브레인과 동형",
+      "type": "insight",
+      "origin": "mine",
+      "topic": "cross",
+      "tags": [
+        "지식관리",
+        "에이전트"
+      ],
+      "url": "../ai-agents/harness-100/",
+      "summary": "knowledge-base-builder 하네스가 이 브레인 파이프라인과 같은 구조."
+    },
+    {
+      "id": "me-ai-native-thread",
+      "label": "'AI 네이티브'가 공통 축",
+      "type": "insight",
+      "origin": "mine",
+      "topic": "cross",
+      "tags": [
+        "AI도구"
+      ],
+      "url": "../",
+      "summary": "알렉스·Harness100·Claude Code가 모두 'AI를 기본 도구로'라는 축을 공유."
+    },
+    {
+      "id": "me-loop-vs-agentteam",
+      "label": "루프 엔지니어링 ↔ 에이전트 팀",
+      "type": "insight",
+      "origin": "mine",
+      "topic": "cross",
+      "tags": [
+        "AI코딩",
+        "에이전트"
+      ],
+      "url": "../",
+      "summary": "알렉스의 루프 실무와 하네스의 팀 오케스트레이션은 같은 문제의 다른 접근."
+    },
+    {
+      "id": "me-ragdebate",
+      "label": "RAG 논쟁 접점",
+      "type": "insight",
+      "origin": "mine",
+      "topic": "cross",
+      "tags": [
+        "LLM"
+      ],
+      "url": "../",
+      "summary": "LLM Wiki의 사전합성 주장과 llm-app-builder의 RAG가 대비된다."
+    },
+    {
+      "id": "ce-ai-employees",
+      "label": "클로드 코드 AI 직원 만들기(AIMAX)",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "에이전트",
+        "AI도구",
+        "AI코딩"
+      ],
+      "url": "../ai-agents/claude-code-ai-employees/",
+      "summary": "클로드를 챗봇 아닌 '직원'·비즈니스 OS로 세팅하는 AIMAX 실전 팁 8편 종합."
+    },
+    {
+      "id": "ce-prompt-techniques",
+      "label": "5가지 프롬프트 기법",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "AI도구"
+      ],
+      "url": "../ai-agents/claude-code-ai-employees/",
+      "summary": "인터뷰·다각도검토·문서체인·프로젝트분해·지속적맥락으로 결과 품질을 끌어올린다."
+    },
+    {
+      "id": "ce-interview",
+      "label": "인터뷰 기법(나를 심문하라)",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "AI도구"
+      ],
+      "url": "../ai-agents/claude-code-ai-employees/",
+      "summary": "결과물 시키기 전에 AI가 먼저 질문하게 해 맥락을 확보한다."
+    },
+    {
+      "id": "ce-multireview",
+      "label": "다각도 비판 검토",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "AI도구"
+      ],
+      "url": "../ai-agents/claude-code-ai-employees/",
+      "summary": "CFO·클라이언트·회의적 이사회 관점으로 3인칭 검토해 견고하게 만든다."
+    },
+    {
+      "id": "ce-learnings",
+      "label": "learnings.md 자가진화 스킬",
+      "type": "insight",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "에이전트",
+        "AI코딩"
+      ],
+      "url": "../ai-agents/claude-code-ai-employees/",
+      "summary": "스킬 옆 learnings.md에 교정을 누적해 복제 불가능한 '제도적 기억'을 만든다."
+    },
+    {
+      "id": "ce-skill-vs-plugin",
+      "label": "스킬 vs 플러그인",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "AI도구",
+        "AI코딩"
+      ],
+      "url": "../ai-agents/claude-code-ai-employees/",
+      "summary": "스킬=워크플로우 자동화 매크로, 플러그인=스킬 묶음 번들."
+    },
+    {
+      "id": "ce-cowork-31",
+      "label": "Cowork 소상공인 31스킬",
+      "type": "entity",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "AI도구"
+      ],
+      "url": "../ai-agents/claude-code-ai-employees/",
+      "summary": "데스크톱 Cowork 전용 플러그인; 재무·영업·행정 도구와 직접 연동."
+    },
+    {
+      "id": "ce-hitl",
+      "label": "Human in the loop",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "에이전트"
+      ],
+      "url": "../ai-agents/claude-code-ai-employees/",
+      "summary": "결제·외부 발송 등 되돌리기 어려운 작업은 최종 승인 뒤 실행."
+    },
+    {
+      "id": "ce-connectors",
+      "label": "커넥터/MCP 도구 연결",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "AI도구"
+      ],
+      "url": "../ai-agents/claude-code-ai-employees/",
+      "summary": "Gmail·Airtable·Canva·Blotato·Zapier MCP를 묶어 통합 워크플로우 구성."
+    },
+    {
+      "id": "ce-ai-os",
+      "label": "AI = 비즈니스 OS",
+      "type": "insight",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "AI도구",
+        "에이전트"
+      ],
+      "url": "../ai-agents/claude-code-ai-employees/",
+      "summary": "AI를 대화 상대 아닌 명령 수행 운영체제로 세팅해 반복 업무를 제거한다."
+    },
+    {
+      "id": "ce-5stages",
+      "label": "AI 활용 5단계(Peter Yang)",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "AI도구",
+        "AI코딩"
+      ],
+      "url": "../ai-agents/claude-code-ai-employees/",
+      "summary": "질문→프로젝트→프로토타입→앱→개인 에이전트; 5단계 관문은 클로드 코드 전환."
+    },
+    {
+      "id": "ce-fable5-web",
+      "label": "Fable 5 + Higgsfield 웹 에이전시",
+      "type": "entity",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "AI도구"
+      ],
+      "url": "../ai-agents/claude-code-ai-employees/",
+      "summary": "비전 강화 모델+영상MCP로 스크린샷을 3D 사이트로 클로닝하는 수익 모델."
+    },
+    {
+      "id": "ce-vs-stack",
+      "label": "직원 팁 ↔ 팀 세팅 골격",
+      "type": "insight",
+      "origin": "mine",
+      "topic": "cross",
+      "tags": [
+        "에이전트",
+        "AI도구"
+      ],
+      "url": "../ai-agents/claude-code-ai-employees/",
+      "summary": "이 8편은 에이전트 스택/Harness의 팀 골격 위에 얹히는 개인·소상공인 활용 팁이다."
+    },
+    {
+      "id": "mk-sharp-targeting",
+      "label": "뾰족한 타겟팅",
+      "type": "concept",
+      "origin": "external",
+      "topic": "marketing-cases",
+      "tags": [
+        "마케팅",
+        "DTC"
+      ],
+      "url": "../marketing-cases/dtc-marketing-cases/",
+      "summary": "'모두'가 아니라 한 무리에게만 겨눈다(긴머리 여성 모자, 내향인 카페, 마이크로 인플루언서)."
+    },
+    {
+      "id": "mk-one-differentiator",
+      "label": "차별점 하나만 강조",
+      "type": "concept",
+      "origin": "external",
+      "topic": "marketing-cases",
+      "tags": [
+        "마케팅",
+        "DTC"
+      ],
+      "url": "../marketing-cases/dtc-marketing-cases/",
+      "summary": "기능이 여럿이라도 강점 하나만 밀어붙인다(녹화 선글라스, 목걸이 선글라스)."
+    },
+    {
+      "id": "mk-show-problem-solution",
+      "label": "문제→해결 장면 보여주기",
+      "type": "concept",
+      "origin": "external",
+      "topic": "marketing-cases",
+      "tags": [
+        "마케팅",
+        "콘텐츠"
+      ],
+      "url": "../marketing-cases/dtc-marketing-cases/",
+      "summary": "설명 대신 겪는 불편→사라지는 순간을 대비시킨다(Fable 케이블, 켈러 웨인)."
+    },
+    {
+      "id": "mk-pain-point",
+      "label": "일상의 작은 불편을 판다",
+      "type": "concept",
+      "origin": "external",
+      "topic": "marketing-cases",
+      "tags": [
+        "마케팅",
+        "제품"
+      ],
+      "url": "../marketing-cases/dtc-marketing-cases/",
+      "summary": "기술이 아니라 매일의 사소한 불평을 겨눈다(링고 텀블러, 벗겨쓰는 접시)."
+    },
+    {
+      "id": "mk-influencer-trust",
+      "label": "인플루언서는 신뢰로 굴린다",
+      "type": "insight",
+      "origin": "external",
+      "topic": "marketing-cases",
+      "tags": [
+        "마케팅",
+        "인플루언서"
+      ],
+      "url": "../marketing-cases/dtc-marketing-cases/",
+      "summary": "대본 강요 대신 마이크로 인플루언서·강요 없는 선물로 자발적 홍보(닐 파텔, Triangl)."
+    },
+    {
+      "id": "mk-reframing",
+      "label": "리프레이밍(재정의)",
+      "type": "concept",
+      "origin": "external",
+      "topic": "marketing-cases",
+      "tags": [
+        "마케팅",
+        "브랜딩"
+      ],
+      "url": "../marketing-cases/dtc-marketing-cases/",
+      "summary": "같은 물건을 다른 의미로 재정의해 값을 올린다(칫솔=건강기기, 인형 6→60달러, SPF=생존도구)."
+    },
+    {
+      "id": "mk-niche-whitespace",
+      "label": "틈새·화이트스페이스",
+      "type": "concept",
+      "origin": "external",
+      "topic": "marketing-cases",
+      "tags": [
+        "마케팅",
+        "브랜딩"
+      ],
+      "url": "../marketing-cases/dtc-marketing-cases/",
+      "summary": "레드오션의 빈칸을 찾아 기준을 바꾼다(슈퍼구프 옥시벤존프리, Triangl 신소재)."
+    },
+    {
+      "id": "mk-price-anchor",
+      "label": "가격·앵커 심리",
+      "type": "concept",
+      "origin": "external",
+      "topic": "marketing-cases",
+      "tags": [
+        "마케팅",
+        "세일즈"
+      ],
+      "url": "../marketing-cases/dtc-marketing-cases/",
+      "summary": "중간가격은 죽음, 0 하나 더 붙이는 앵커 효과로 브랜드 가치를 올린다(알렉스 호모지)."
+    },
+    {
+      "id": "mk-signature-format",
+      "label": "시그니처 포맷 + 훅",
+      "type": "concept",
+      "origin": "external",
+      "topic": "marketing-cases",
+      "tags": [
+        "마케팅",
+        "콘텐츠"
+      ],
+      "url": "../marketing-cases/dtc-marketing-cases/",
+      "summary": "반복 가능한 포맷과 오픈루프·1초 본론 같은 훅으로 조회수를 설계(리코 인카나, 켈러 웨인)."
+    },
+    {
+      "id": "mk-fight-where-customers",
+      "label": "고객 있는 곳에서 싸운다(제로클릭)",
+      "type": "insight",
+      "origin": "external",
+      "topic": "marketing-cases",
+      "tags": [
+        "마케팅",
+        "플랫폼"
+      ],
+      "url": "../marketing-cases/dtc-marketing-cases/",
+      "summary": "자사몰 대신 아마존·플랫폼 안에서 승부, 클릭 없이 추천되게 한다(Poppi, IQBar, 웨스 맥다웰)."
+    },
+    {
+      "id": "mk-founder-authenticity",
+      "label": "창업자 날것 스토리텔링",
+      "type": "insight",
+      "origin": "external",
+      "topic": "marketing-cases",
+      "tags": [
+        "마케팅",
+        "브랜딩"
+      ],
+      "url": "../marketing-cases/dtc-marketing-cases/",
+      "summary": "완벽한 광고보다 창업자의 진심(민낯 틱톡)이 팬덤을 만든다(Poppi, Lauren Castle)."
+    },
+    {
+      "id": "mk-grit-customer-voice",
+      "label": "고객 목소리 집요함 + 끈기",
+      "type": "insight",
+      "origin": "external",
+      "topic": "marketing-cases",
+      "tags": [
+        "마케팅",
+        "브랜딩"
+      ],
+      "url": "../marketing-cases/dtc-marketing-cases/",
+      "summary": "성공은 화려한 아이디어가 아니라 고객 목소리를 듣는 집요함과 버티는 끈기(Lauren Castle, 슈퍼구프)."
+    },
+    {
+      "id": "mk-simple-idea-biz",
+      "label": "단순 아이디어의 사업화",
+      "type": "insight",
+      "origin": "external",
+      "topic": "marketing-cases",
+      "tags": [
+        "마케팅",
+        "제품"
+      ],
+      "url": "../marketing-cases/dtc-marketing-cases/",
+      "summary": "복잡한 기술 없이 실행 가능한 단순 아이디어(접이식 진열대·착화 종이판)와 수입 차익거래."
+    },
+    {
+      "id": "mk-solo-brand",
+      "label": "1인 브랜드도 이 원리로",
+      "type": "insight",
+      "origin": "mine",
+      "topic": "cross",
+      "tags": [
+        "마케팅",
+        "1인사업"
+      ],
+      "url": "../marketing-cases/dtc-marketing-cases/",
+      "summary": "창업자 진심·단순 아이디어·차별점 하나는 솔로프리너가 자본 없이 브랜드를 세우는 레버."
+    },
+    {
+      "id": "tool-aimax-reviews",
+      "label": "AI 모델·도구 리뷰 (AIMAX)",
+      "type": "entity",
+      "origin": "external",
+      "topic": "ai-tools",
+      "tags": [
+        "aimax",
+        "review",
+        "youtube"
+      ],
+      "url": "../ai-tools/ai-model-tool-reviews/",
+      "summary": "AIMAX_PD 채널의 2026 6~7월 AI 도구 리뷰 쇼츠 5편 종합"
+    },
+    {
+      "id": "tool-notebooklm",
+      "label": "구글 NotebookLM",
+      "type": "entity",
+      "origin": "external",
+      "topic": "ai-tools",
+      "tags": [
+        "google",
+        "content",
+        "notebooklm"
+      ],
+      "url": "../ai-tools/ai-model-tool-reviews/",
+      "summary": "니치 발굴부터 영상 자동 제작까지 무료 콘텐츠 파이프라인 도구"
+    },
+    {
+      "id": "tool-claude-fable5",
+      "label": "Claude Fable 5",
+      "type": "entity",
+      "origin": "external",
+      "topic": "ai-tools",
+      "tags": [
+        "claude",
+        "fable",
+        "agent"
+      ],
+      "url": "../ai-tools/ai-model-tool-reviews/",
+      "summary": "루프·스킬·비전·컨텍스트를 갖춘 1인 기업 운영체제형 Claude 모델"
+    },
+    {
+      "id": "tool-chatgpt-56",
+      "label": "ChatGPT 5.6",
+      "type": "entity",
+      "origin": "external",
+      "topic": "ai-tools",
+      "tags": [
+        "openai",
+        "chatgpt",
+        "automation"
+      ],
+      "url": "../ai-tools/ai-model-tool-reviews/",
+      "summary": "스킬·커넥터·에이전트로 업무를 자동화하는 ChatGPT 시스템"
+    },
+    {
+      "id": "tool-fable-loops",
+      "label": "Fable 루프(Loops)",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-tools",
+      "tags": [
+        "loop",
+        "self-correction",
+        "agent"
+      ],
+      "url": "../ai-tools/ai-model-tool-reviews/",
+      "summary": "목표+루브릭+검증자로 환경 피드백 기반 자율 반복·자기교정"
+    },
+    {
+      "id": "tool-skills-pattern",
+      "label": "스킬(Skills) 패턴",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-tools",
+      "tags": [
+        "skills",
+        "workflow",
+        "reusable"
+      ],
+      "url": "../ai-tools/ai-model-tool-reviews/",
+      "summary": "반복 업무를 포터블 워크플로우로 패키징해 재사용"
+    },
+    {
+      "id": "tool-memory-context",
+      "label": "메모리·컨텍스트 시스템",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-tools",
+      "tags": [
+        "memory",
+        "context",
+        "sop"
+      ],
+      "url": "../ai-tools/ai-model-tool-reviews/",
+      "summary": "로컬 문서+memory.md로 비즈니스 맥락을 축적해 모델 무관하게 소유"
+    },
+    {
+      "id": "tool-connectors",
+      "label": "커넥터·도구 통합",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-tools",
+      "tags": [
+        "connectors",
+        "integration",
+        "zapier"
+      ],
+      "url": "../ai-tools/ai-model-tool-reviews/",
+      "summary": "Gmail·Drive·Slack·Notion 등을 AI에 연결해 엔드투엔드 자동화"
+    },
+    {
+      "id": "tool-oss-local-shift",
+      "label": "오픈소스·로컬 이전 흐름",
+      "type": "insight",
+      "origin": "external",
+      "topic": "ai-tools",
+      "tags": [
+        "opensource",
+        "local",
+        "cost"
+      ],
+      "url": "../ai-tools/ai-model-tool-reviews/",
+      "summary": "유료 SaaS 구독을 로컬·오픈소스 도구로 대체하는 흐름"
+    },
+    {
+      "id": "tool-codebase-memory-mcp",
+      "label": "Codebase Memory MCP",
+      "type": "entity",
+      "origin": "external",
+      "topic": "ai-tools",
+      "tags": [
+        "mcp",
+        "lsp",
+        "coding"
+      ],
+      "url": "../ai-tools/ai-model-tool-reviews/",
+      "summary": "Memory+LSP로 코드베이스 이해 토큰을 크게 절감(주장 최대 99%)"
+    },
+    {
+      "id": "tool-timesfm",
+      "label": "Google TimesFM",
+      "type": "entity",
+      "origin": "external",
+      "topic": "ai-tools",
+      "tags": [
+        "forecast",
+        "timeseries",
+        "google"
+      ],
+      "url": "../ai-tools/ai-model-tool-reviews/",
+      "summary": "추가 훈련 없이 시계열 다음 값을 예측하는 파운데이션 모델"
+    },
+    {
+      "id": "tool-agent-system-shift",
+      "label": "질문창→업무 시스템 전환",
+      "type": "insight",
+      "origin": "mine",
+      "topic": "cross",
+      "tags": [
+        "skills",
+        "memory",
+        "agent",
+        "convergence"
+      ],
+      "url": "../ai-tools/ai-model-tool-reviews/",
+      "summary": "주요 AI 제품이 스킬·메모리·에이전트라는 공통 골격으로 수렴 중"
+    },
+    {
+      "id": "tool-vendor-claims-caveat",
+      "label": "벤더 수치 주장 경계",
+      "type": "claim",
+      "origin": "mine",
+      "topic": "cross",
+      "tags": [
+        "skepticism",
+        "marketing",
+        "verification"
+      ],
+      "url": "../ai-tools/ai-model-tool-reviews/",
+      "summary": "'6배·99%·20만 조회' 등 홍보 수치는 검증 없이 인용 금지"
+    },
+    {
+      "id": "sb-aimax-series",
+      "label": "AIMAX 세컨드브레인 제작 시리즈",
+      "type": "entity",
+      "origin": "external",
+      "topic": "knowledge-management",
+      "tags": [
+        "second-brain",
+        "obsidian",
+        "llm-wiki"
+      ],
+      "url": "../knowledge-management/aimax-second-brain-series/",
+      "summary": "세컨드브레인 3부작 종합: 기초 세팅, 5개 운영 명령어, 옵시디언 ACE 원칙"
+    },
+    {
+      "id": "sb-node-splitting",
+      "label": "노드 분할 (5~10개로 쪼개기)",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "knowledge-management",
+      "tags": [
+        "ingest",
+        "backlink"
+      ],
+      "url": "../knowledge-management/aimax-second-brain-series/",
+      "summary": "ingest 시 긴 파일 하나 대신 도구·기법·개념 축으로 5~10개 페이지로 분할해 백링크 연결"
+    },
+    {
+      "id": "sb-hot-cache",
+      "label": "핫 캐시 (Hot Cache)",
+      "type": "concept",
+      "origin": "external",
+      "topic": "knowledge-management",
+      "tags": [
+        "hot-cache",
+        "token"
+      ],
+      "url": "../knowledge-management/aimax-second-brain-series/",
+      "summary": "최근 대화·핵심 정보를 약 500자로 상시 요약해 전체 위키 재검색 없이 맥락 즉시 파악"
+    },
+    {
+      "id": "sb-five-commands",
+      "label": "5개 운영 명령어 (load·trace·connect·challenge·emerge)",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "knowledge-management",
+      "tags": [
+        "query",
+        "command"
+      ],
+      "url": "../knowledge-management/aimax-second-brain-series/",
+      "summary": "완성된 위키를 부리는 조회·활용 명령 패턴 — Query 작업의 확장"
+    },
+    {
+      "id": "sb-ace-framework",
+      "label": "ACE 프레임워크 (Atlas·Calendar·Efforts)",
+      "type": "concept",
+      "origin": "external",
+      "topic": "knowledge-management",
+      "tags": [
+        "obsidian",
+        "ace",
+        "moc"
+      ],
+      "url": "../knowledge-management/aimax-second-brain-series/",
+      "summary": "옵시디언 조직화 원칙: 구조는 자격이 있을 때 만든다 — Atlas/Calendar/Efforts + MOC 허브"
+    },
+    {
+      "id": "sb-obsidian-principles",
+      "label": "옵시디언 사고 도구 원칙",
+      "type": "concept",
+      "origin": "external",
+      "topic": "knowledge-management",
+      "tags": [
+        "obsidian",
+        "data-ownership"
+      ],
+      "url": "../knowledge-management/aimax-second-brain-series/",
+      "summary": "데이터 소유권·링크와 그래프뷰·AI 콘텐츠 분리 등 옵시디언을 사고법으로 쓰는 원칙"
+    },
+    {
+      "id": "vc-playbook",
+      "label": "바이브코딩 실전 플레이북",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "vibe-coding",
+      "tags": [
+        "AI코딩",
+        "수익화",
+        "바이브코딩"
+      ],
+      "url": "../vibe-coding/vibe-coding-playbook/",
+      "summary": "클로드로 앱·콘텐츠·디자인·실물상품을 만들어 수익화하는 AIMAX_PD 14편 종합."
+    },
+    {
+      "id": "vc-vibe-coding",
+      "label": "바이브 코딩",
+      "type": "concept",
+      "origin": "external",
+      "topic": "vibe-coding",
+      "tags": [
+        "AI코딩",
+        "노코드"
+      ],
+      "url": "../vibe-coding/vibe-coding-playbook/",
+      "summary": "코드 없이 일상 언어 명령만으로 앱·게임·사이트를 만드는 방식."
+    },
+    {
+      "id": "vc-results-over-info",
+      "label": "정보 아닌 결과를 판다",
+      "type": "insight",
+      "origin": "external",
+      "topic": "vibe-coding",
+      "tags": [
+        "수익화"
+      ],
+      "url": "../vibe-coding/vibe-coding-playbook/",
+      "summary": "전자책·강의(가치 하락) 대신 즉각 변화를 주는 도구·시스템을 판다."
+    },
+    {
+      "id": "vc-mini-web-app",
+      "label": "미니 웹 앱",
+      "type": "concept",
+      "origin": "external",
+      "topic": "vibe-coding",
+      "tags": [
+        "앱",
+        "수익화"
+      ],
+      "url": "../vibe-coding/vibe-coding-playbook/",
+      "summary": "단일 HTML 프론트엔드 앱으로 마이크로 문제 하나를 풀어 $7~47에 판매."
+    },
+    {
+      "id": "vc-lovable",
+      "label": "Lovable / Bolt 노코드 빌더",
+      "type": "entity",
+      "origin": "external",
+      "topic": "vibe-coding",
+      "tags": [
+        "AI도구",
+        "노코드"
+      ],
+      "url": "../vibe-coding/vibe-coding-playbook/",
+      "summary": "인증·DB·실배포를 자동 처리하는 빌더; 초보는 기획만 클로드로."
+    },
+    {
+      "id": "vc-layering",
+      "label": "7단계 레이어링 빌드",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "vibe-coding",
+      "tags": [
+        "AI코딩",
+        "노코드"
+      ],
+      "url": "../vibe-coding/vibe-coding-playbook/",
+      "summary": "기반→온보딩→핵심→대시보드→내보내기→설정→마감 순으로 층을 쌓아 지시."
+    },
+    {
+      "id": "vc-batch-debug",
+      "label": "일괄 디버깅 지시문",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "vibe-coding",
+      "tags": [
+        "AI코딩"
+      ],
+      "url": "../vibe-coding/vibe-coding-playbook/",
+      "summary": "버그를 모아 한 번에, '나열한 것만 수정하고 다른 건 건드리지 마'로 부작용 차단."
+    },
+    {
+      "id": "vc-higgsfield",
+      "label": "Higgsfield MCP",
+      "type": "entity",
+      "origin": "external",
+      "topic": "vibe-coding",
+      "tags": [
+        "AI도구",
+        "이미지생성"
+      ],
+      "url": "../vibe-coding/vibe-coding-playbook/",
+      "summary": "클로드에 연결하는 이미지·영상 생성 엔진(커넥터/스킬)."
+    },
+    {
+      "id": "vc-content-automation",
+      "label": "콘텐츠 자동화 파이프라인",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "vibe-coding",
+      "tags": [
+        "콘텐츠",
+        "자동화"
+      ],
+      "url": "../vibe-coding/vibe-coding-playbook/",
+      "summary": "리서치→스크립트→이미지→영상→편집→예약발행을 클로드로 90% 자동화."
+    },
+    {
+      "id": "vc-human-touch",
+      "label": "휴먼 터치(마지막 10%)",
+      "type": "claim",
+      "origin": "external",
+      "topic": "vibe-coding",
+      "tags": [
+        "콘텐츠"
+      ],
+      "url": "../vibe-coding/vibe-coding-playbook/",
+      "summary": "AI가 90% 생산, 인간이 안목·진정성·에너지로 차별화·계정 보호."
+    },
+    {
+      "id": "vc-design-md",
+      "label": "디자인 MD 파일",
+      "type": "concept",
+      "origin": "external",
+      "topic": "vibe-coding",
+      "tags": [
+        "디자인",
+        "브랜드"
+      ],
+      "url": "../vibe-coding/vibe-coding-playbook/",
+      "summary": "색상·서체·간격 규칙을 문서로 박제해 모든 시각 자산에 일관 적용."
+    },
+    {
+      "id": "vc-claude-design",
+      "label": "Claude Design",
+      "type": "entity",
+      "origin": "external",
+      "topic": "vibe-coding",
+      "tags": [
+        "AI도구",
+        "디자인"
+      ],
+      "url": "../vibe-coding/vibe-coding-playbook/",
+      "summary": "직접 편집 UI·PPTX·Code 통합의 디자인 앱, 컨텍스트 스위칭 0 지향."
+    },
+    {
+      "id": "vc-unique-mechanism",
+      "label": "고유 기전 카피 전략",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "vibe-coding",
+      "tags": [
+        "카피",
+        "웹사이트"
+      ],
+      "url": "../vibe-coding/vibe-coding-playbook/",
+      "summary": "Reddit·Quora로 타겟 심리 분석→'아하'를 주는 고유 기전 도출로 고단가 랜딩."
+    },
+    {
+      "id": "vc-pod-tshirt",
+      "label": "POD 티셔츠 대량 시스템",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "vibe-coding",
+      "tags": [
+        "실물",
+        "POD",
+        "수익화"
+      ],
+      "url": "../vibe-coding/vibe-coding-playbook/",
+      "summary": "검증 패턴 발굴→대량 생성기→독립스토어→Printful 풀필먼트→SEO."
+    },
+    {
+      "id": "vc-performance-pricing",
+      "label": "성과 기반 가격(리테이너·PPL)",
+      "type": "insight",
+      "origin": "external",
+      "topic": "vibe-coding",
+      "tags": [
+        "수익화",
+        "가격"
+      ],
+      "url": "../vibe-coding/vibe-coding-playbook/",
+      "summary": "'만든 것'이 아니라 '벌어준 것'의 10~20%를 월 리테이너·리드당 과금으로."
+    },
+    {
+      "id": "vc-promo-caveat",
+      "label": "홍보성 수익 주장 경계",
+      "type": "claim",
+      "origin": "mine",
+      "topic": "vibe-coding",
+      "tags": [
+        "검증",
+        "리터러시"
+      ],
+      "url": "../vibe-coding/vibe-coding-playbook/",
+      "summary": "월 $26k·월 1억 등은 미검증 후킹; 워크플로우만 취하고 숫자는 낮춰 읽는다."
+    },
+    {
+      "id": "mon-playbook",
+      "label": "AI 수익화 플레이북(AIMAX)",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-monetization",
+      "tags": [
+        "수익화",
+        "부업",
+        "AI도구"
+      ],
+      "url": "../ai-monetization/ai-monetization-playbook/",
+      "summary": "AIMAX_PD 14편을 통합한 AI 창업·부업 방법론."
+    },
+    {
+      "id": "mon-funnel",
+      "label": "통합 5단계 공식",
+      "type": "procedure",
+      "origin": "mine",
+      "topic": "ai-monetization",
+      "tags": [
+        "수익화"
+      ],
+      "url": "../ai-monetization/ai-monetization-playbook/",
+      "summary": "수요검증→모델선택→AI제작→빌드인퍼블릭→자동화로 4·6단계류를 통합."
+    },
+    {
+      "id": "mon-demand-first",
+      "label": "수요 우선 검증",
+      "type": "claim",
+      "origin": "external",
+      "topic": "ai-monetization",
+      "tags": [
+        "수익화",
+        "마케팅"
+      ],
+      "url": "../ai-monetization/ai-monetization-playbook/",
+      "summary": "열정이 아니라 시장이 이미 돈 쓰는 곳에서 출발한다."
+    },
+    {
+      "id": "mon-rrt",
+      "label": "RRT 테스트",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-monetization",
+      "tags": [
+        "수익화"
+      ],
+      "url": "../ai-monetization/ai-monetization-playbook/",
+      "summary": "Resist·Raise·Technology로 니치 생존성 검증(코디 산체스)."
+    },
+    {
+      "id": "mon-burning-problem",
+      "label": "불타는 문제 발굴",
+      "type": "insight",
+      "origin": "external",
+      "topic": "ai-monetization",
+      "tags": [
+        "수익화",
+        "마케팅"
+      ],
+      "url": "../ai-monetization/ai-monetization-playbook/",
+      "summary": "별점3점 리뷰·댓글에서 지갑 여는 구체적 고통을 찾는다."
+    },
+    {
+      "id": "mon-ladder",
+      "label": "AI 에이전시 사다리(0~3단계)",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-monetization",
+      "tags": [
+        "에이전시",
+        "컨설팅"
+      ],
+      "url": "../ai-monetization/ai-monetization-playbook/",
+      "summary": "시간제 컨설팅→감사→프로젝트→리테이너(네이트 허크)."
+    },
+    {
+      "id": "mon-aios",
+      "label": "AI 운영체제(AIOS)",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-monetization",
+      "tags": [
+        "에이전시",
+        "AI도구"
+      ],
+      "url": "../ai-monetization/ai-monetization-playbook/",
+      "summary": "고객 데이터·전문지식을 결합해 사장을 병목에서 빼는 시스템."
+    },
+    {
+      "id": "mon-digital-product",
+      "label": "디지털 제품($27~47)",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-monetization",
+      "tags": [
+        "수익화",
+        "부업"
+      ],
+      "url": "../ai-monetization/ai-monetization-playbook/",
+      "summary": "페인포인트 해결 가이드를 클로드+Canva로 제작."
+    },
+    {
+      "id": "mon-boring-biz",
+      "label": "지루한/블루칼라 비즈니스 + AI 마케팅",
+      "type": "insight",
+      "origin": "external",
+      "topic": "ai-monetization",
+      "tags": [
+        "수익화",
+        "마케팅"
+      ],
+      "url": "../ai-monetization/ai-monetization-playbook/",
+      "summary": "남이 싫어하는 반복·육체노동에 AI 마케팅을 얹는 역설 전략."
+    },
+    {
+      "id": "mon-sales-auto",
+      "label": "잠들지 않는 영업팀",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-monetization",
+      "tags": [
+        "자동화",
+        "영업"
+      ],
+      "url": "../ai-monetization/ai-monetization-playbook/",
+      "summary": "Apify·Firecrawl+클로드로 리드수집~아웃리치 완전 자동화."
+    },
+    {
+      "id": "mon-content-auto",
+      "label": "콘텐츠 자동화 파이프라인",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-monetization",
+      "tags": [
+        "자동화",
+        "콘텐츠"
+      ],
+      "url": "../ai-monetization/ai-monetization-playbook/",
+      "summary": "기획~업로드를 클로드 코드로 잇는 5시간 근무 시스템."
+    },
+    {
+      "id": "mon-human-gate",
+      "label": "휴먼 게이트",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-monetization",
+      "tags": [
+        "자동화"
+      ],
+      "url": "../ai-monetization/ai-monetization-playbook/",
+      "summary": "100% 자동화 대신 단계마다 인간 승인 지점을 남긴다."
+    },
+    {
+      "id": "mon-vibe-coding",
+      "label": "바이브 코딩(무개발자 앱)",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-monetization",
+      "tags": [
+        "AI코딩",
+        "SaaS"
+      ],
+      "url": "../ai-monetization/ai-monetization-playbook/",
+      "summary": "클로드 디자인+코덱스로 캘린들리류를 일상어로 제작."
+    },
+    {
+      "id": "mon-gamma",
+      "label": "감마 그랜트 리 성공 공식",
+      "type": "event",
+      "origin": "external",
+      "topic": "ai-monetization",
+      "tags": [
+        "스타트업",
+        "사례"
+      ],
+      "url": "../ai-monetization/ai-monetization-playbook/",
+      "summary": "소수정예·2주100피칭·유기적성장+실결제 PMF·PLG·집중."
+    },
+    {
+      "id": "mon-execution",
+      "label": "태도·실행 > 완벽한 기술",
+      "type": "insight",
+      "origin": "external",
+      "topic": "ai-monetization",
+      "tags": [
+        "수익화"
+      ],
+      "url": "../ai-monetization/ai-monetization-playbook/",
+      "summary": "채널 관통 메시지이자 홍보 훅; 그냥 시작하는 용기."
+    },
+    {
+      "id": "mon-hype-warning",
+      "label": "과대광고 주의",
+      "type": "claim",
+      "origin": "mine",
+      "topic": "ai-monetization",
+      "tags": [
+        "수익화"
+      ],
+      "url": "../ai-monetization/ai-monetization-playbook/",
+      "summary": "수치·성공담은 검증 안 된 홍보성 주장, 방법론만 취한다."
+    }
   ],
   "links": [
-    { "source": "km-llm-wiki", "target": "km-ingest-synthesis", "type": "part-of" },
-    { "source": "km-llm-wiki", "target": "km-cascade", "type": "part-of" },
-    { "source": "km-llm-wiki", "target": "km-llm-writes", "type": "part-of" },
-    { "source": "km-ingest-synthesis", "target": "km-rag", "type": "refute" },
-    { "source": "km-vs-rag", "target": "km-rag", "type": "refute" },
-    { "source": "km-vs-rag", "target": "km-ingest-synthesis", "type": "support" },
-    { "source": "km-ingest-synthesis", "target": "km-compounding", "type": "extend" },
-    { "source": "km-karpathy", "target": "km-llm-wiki", "type": "support" },
-    { "source": "km-cascade", "target": "km-compounding", "type": "support" },
-
-    { "source": "bg-build-guide", "target": "km-llm-wiki", "type": "extend" },
-    { "source": "bg-build-guide", "target": "bg-5blocks", "type": "part-of" },
-    { "source": "bg-5blocks", "target": "bg-clawmd", "type": "part-of" },
-    { "source": "bg-5blocks", "target": "bg-dream", "type": "part-of" },
-    { "source": "bg-5blocks", "target": "bg-processed", "type": "part-of" },
-    { "source": "bg-build-guide", "target": "bg-mobile-ingest", "type": "part-of" },
-    { "source": "bg-build-guide", "target": "bg-self-evolving", "type": "support" },
-    { "source": "bg-self-evolving", "target": "km-compounding", "type": "support" },
-    { "source": "bg-dream", "target": "km-cascade", "type": "related" },
-    { "source": "bg-processed", "target": "km-ingest-synthesis", "type": "support" },
-    { "source": "bg-build-guide", "target": "km-rag", "type": "refute" },
-    { "source": "me-dream-is-lint", "target": "bg-dream", "type": "support" },
-    { "source": "me-dream-is-lint", "target": "me-brain-is-llmwiki", "type": "extend" },
-    { "source": "bg-build-guide", "target": "as-stack", "type": "related" },
-
-    { "source": "cc-alex", "target": "cc-meta", "type": "related" },
-    { "source": "cc-alex", "target": "cc-solopreneur", "type": "extend" },
-    { "source": "cc-alex", "target": "cc-ai-native", "type": "extend" },
-    { "source": "cc-alex", "target": "cc-action", "type": "extend" },
-    { "source": "cc-alex", "target": "cc-loop-eng", "type": "extend" },
-    { "source": "cc-alex", "target": "cc-meta-nocode", "type": "support" },
-    { "source": "cc-alex", "target": "cc-ax-war", "type": "related" },
-    { "source": "cc-ax-war", "target": "cc-pankkalgi", "type": "extend" },
-    { "source": "cc-ai-native", "target": "cc-nondev", "type": "support" },
-    { "source": "cc-solopreneur", "target": "cc-nondev", "type": "support" },
-    { "source": "cc-alex", "target": "cc-course", "type": "part-of" },
-
-    { "source": "h-harness100", "target": "h-harness", "type": "part-of" },
-    { "source": "h-harness", "target": "h-agent-team", "type": "part-of" },
-    { "source": "h-harness", "target": "h-orchestrator", "type": "part-of" },
-    { "source": "h-agent-team", "target": "h-sendmessage", "type": "extend" },
-    { "source": "h-harness100", "target": "h-copy-use", "type": "part-of" },
-    { "source": "h-agent-team", "target": "h-claude-code", "type": "support" },
-    { "source": "h-harness100", "target": "h-kb-builder", "type": "part-of" },
-    { "source": "h-harness100", "target": "h-llm-app", "type": "part-of" },
-    { "source": "h-harness100", "target": "h-frameworks", "type": "extend" },
-    { "source": "h-agent-team", "target": "h-prod-workflow", "type": "support" },
-    { "source": "h-frameworks", "target": "h-prod-workflow", "type": "support" },
-
-    { "source": "as-stack", "target": "as-local-exec", "type": "part-of" },
-    { "source": "as-stack", "target": "as-parallel", "type": "part-of" },
-    { "source": "as-stack", "target": "as-social-research", "type": "part-of" },
-    { "source": "as-stack", "target": "as-virtual-org", "type": "part-of" },
-    { "source": "as-stack", "target": "as-slash", "type": "part-of" },
-    { "source": "as-helena", "target": "as-stack", "type": "support" },
-    { "source": "as-parallel", "target": "h-agent-team", "type": "related" },
-    { "source": "as-parallel", "target": "h-sendmessage", "type": "related" },
-    { "source": "as-slash", "target": "h-orchestrator", "type": "related" },
-    { "source": "as-local-exec", "target": "h-claude-code", "type": "support" },
-    { "source": "as-social-research", "target": "cc-loop-eng", "type": "related" },
-    { "source": "me-stack-vs-harness", "target": "as-stack", "type": "support" },
-    { "source": "me-stack-vs-harness", "target": "h-harness100", "type": "support" },
-    { "source": "me-ai-native-thread", "target": "as-stack", "type": "related" },
-
-    { "source": "me-brain-is-llmwiki", "target": "km-llm-wiki", "type": "extend" },
-    { "source": "me-kb-mirrors-brain", "target": "h-kb-builder", "type": "support" },
-    { "source": "me-kb-mirrors-brain", "target": "km-llm-wiki", "type": "support" },
-    { "source": "me-kb-mirrors-brain", "target": "me-brain-is-llmwiki", "type": "related" },
-    { "source": "me-ai-native-thread", "target": "cc-ai-native", "type": "support" },
-    { "source": "me-ai-native-thread", "target": "h-claude-code", "type": "support" },
-    { "source": "me-ai-native-thread", "target": "h-harness100", "type": "related" },
-    { "source": "me-loop-vs-agentteam", "target": "cc-loop-eng", "type": "related" },
-    { "source": "me-loop-vs-agentteam", "target": "h-agent-team", "type": "related" },
-    { "source": "me-ragdebate", "target": "km-vs-rag", "type": "related" },
-    { "source": "me-ragdebate", "target": "h-llm-app", "type": "related" },
-    { "source": "cc-loop-eng", "target": "h-claude-code", "type": "related" },
-    { "source": "h-kb-builder", "target": "km-llm-wiki", "type": "support" },
-    { "source": "h-llm-app", "target": "km-rag", "type": "related" }
+    {
+      "source": "km-llm-wiki",
+      "target": "km-ingest-synthesis",
+      "type": "part-of"
+    },
+    {
+      "source": "km-llm-wiki",
+      "target": "km-cascade",
+      "type": "part-of"
+    },
+    {
+      "source": "km-llm-wiki",
+      "target": "km-llm-writes",
+      "type": "part-of"
+    },
+    {
+      "source": "km-ingest-synthesis",
+      "target": "km-rag",
+      "type": "refute"
+    },
+    {
+      "source": "km-vs-rag",
+      "target": "km-rag",
+      "type": "refute"
+    },
+    {
+      "source": "km-vs-rag",
+      "target": "km-ingest-synthesis",
+      "type": "support"
+    },
+    {
+      "source": "km-ingest-synthesis",
+      "target": "km-compounding",
+      "type": "extend"
+    },
+    {
+      "source": "km-karpathy",
+      "target": "km-llm-wiki",
+      "type": "support"
+    },
+    {
+      "source": "km-cascade",
+      "target": "km-compounding",
+      "type": "support"
+    },
+    {
+      "source": "bg-build-guide",
+      "target": "km-llm-wiki",
+      "type": "extend"
+    },
+    {
+      "source": "bg-build-guide",
+      "target": "bg-5blocks",
+      "type": "part-of"
+    },
+    {
+      "source": "bg-5blocks",
+      "target": "bg-clawmd",
+      "type": "part-of"
+    },
+    {
+      "source": "bg-5blocks",
+      "target": "bg-dream",
+      "type": "part-of"
+    },
+    {
+      "source": "bg-5blocks",
+      "target": "bg-processed",
+      "type": "part-of"
+    },
+    {
+      "source": "bg-build-guide",
+      "target": "bg-mobile-ingest",
+      "type": "part-of"
+    },
+    {
+      "source": "bg-build-guide",
+      "target": "bg-self-evolving",
+      "type": "support"
+    },
+    {
+      "source": "bg-self-evolving",
+      "target": "km-compounding",
+      "type": "support"
+    },
+    {
+      "source": "bg-dream",
+      "target": "km-cascade",
+      "type": "related"
+    },
+    {
+      "source": "bg-processed",
+      "target": "km-ingest-synthesis",
+      "type": "support"
+    },
+    {
+      "source": "bg-build-guide",
+      "target": "km-rag",
+      "type": "refute"
+    },
+    {
+      "source": "me-dream-is-lint",
+      "target": "bg-dream",
+      "type": "support"
+    },
+    {
+      "source": "me-dream-is-lint",
+      "target": "me-brain-is-llmwiki",
+      "type": "extend"
+    },
+    {
+      "source": "bg-build-guide",
+      "target": "as-stack",
+      "type": "related"
+    },
+    {
+      "source": "cc-alex",
+      "target": "cc-meta",
+      "type": "related"
+    },
+    {
+      "source": "cc-alex",
+      "target": "cc-solopreneur",
+      "type": "extend"
+    },
+    {
+      "source": "cc-alex",
+      "target": "cc-ai-native",
+      "type": "extend"
+    },
+    {
+      "source": "cc-alex",
+      "target": "cc-action",
+      "type": "extend"
+    },
+    {
+      "source": "cc-alex",
+      "target": "cc-loop-eng",
+      "type": "extend"
+    },
+    {
+      "source": "cc-alex",
+      "target": "cc-meta-nocode",
+      "type": "support"
+    },
+    {
+      "source": "cc-alex",
+      "target": "cc-ax-war",
+      "type": "related"
+    },
+    {
+      "source": "cc-ax-war",
+      "target": "cc-pankkalgi",
+      "type": "extend"
+    },
+    {
+      "source": "cc-ai-native",
+      "target": "cc-nondev",
+      "type": "support"
+    },
+    {
+      "source": "cc-solopreneur",
+      "target": "cc-nondev",
+      "type": "support"
+    },
+    {
+      "source": "cc-alex",
+      "target": "cc-course",
+      "type": "part-of"
+    },
+    {
+      "source": "h-harness100",
+      "target": "h-harness",
+      "type": "part-of"
+    },
+    {
+      "source": "h-harness",
+      "target": "h-agent-team",
+      "type": "part-of"
+    },
+    {
+      "source": "h-harness",
+      "target": "h-orchestrator",
+      "type": "part-of"
+    },
+    {
+      "source": "h-agent-team",
+      "target": "h-sendmessage",
+      "type": "extend"
+    },
+    {
+      "source": "h-harness100",
+      "target": "h-copy-use",
+      "type": "part-of"
+    },
+    {
+      "source": "h-agent-team",
+      "target": "h-claude-code",
+      "type": "support"
+    },
+    {
+      "source": "h-harness100",
+      "target": "h-kb-builder",
+      "type": "part-of"
+    },
+    {
+      "source": "h-harness100",
+      "target": "h-llm-app",
+      "type": "part-of"
+    },
+    {
+      "source": "h-harness100",
+      "target": "h-frameworks",
+      "type": "extend"
+    },
+    {
+      "source": "h-agent-team",
+      "target": "h-prod-workflow",
+      "type": "support"
+    },
+    {
+      "source": "h-frameworks",
+      "target": "h-prod-workflow",
+      "type": "support"
+    },
+    {
+      "source": "as-stack",
+      "target": "as-local-exec",
+      "type": "part-of"
+    },
+    {
+      "source": "as-stack",
+      "target": "as-parallel",
+      "type": "part-of"
+    },
+    {
+      "source": "as-stack",
+      "target": "as-social-research",
+      "type": "part-of"
+    },
+    {
+      "source": "as-stack",
+      "target": "as-virtual-org",
+      "type": "part-of"
+    },
+    {
+      "source": "as-stack",
+      "target": "as-slash",
+      "type": "part-of"
+    },
+    {
+      "source": "as-helena",
+      "target": "as-stack",
+      "type": "support"
+    },
+    {
+      "source": "as-parallel",
+      "target": "h-agent-team",
+      "type": "related"
+    },
+    {
+      "source": "as-parallel",
+      "target": "h-sendmessage",
+      "type": "related"
+    },
+    {
+      "source": "as-slash",
+      "target": "h-orchestrator",
+      "type": "related"
+    },
+    {
+      "source": "as-local-exec",
+      "target": "h-claude-code",
+      "type": "support"
+    },
+    {
+      "source": "as-social-research",
+      "target": "cc-loop-eng",
+      "type": "related"
+    },
+    {
+      "source": "me-stack-vs-harness",
+      "target": "as-stack",
+      "type": "support"
+    },
+    {
+      "source": "me-stack-vs-harness",
+      "target": "h-harness100",
+      "type": "support"
+    },
+    {
+      "source": "me-ai-native-thread",
+      "target": "as-stack",
+      "type": "related"
+    },
+    {
+      "source": "me-brain-is-llmwiki",
+      "target": "km-llm-wiki",
+      "type": "extend"
+    },
+    {
+      "source": "me-kb-mirrors-brain",
+      "target": "h-kb-builder",
+      "type": "support"
+    },
+    {
+      "source": "me-kb-mirrors-brain",
+      "target": "km-llm-wiki",
+      "type": "support"
+    },
+    {
+      "source": "me-kb-mirrors-brain",
+      "target": "me-brain-is-llmwiki",
+      "type": "related"
+    },
+    {
+      "source": "me-ai-native-thread",
+      "target": "cc-ai-native",
+      "type": "support"
+    },
+    {
+      "source": "me-ai-native-thread",
+      "target": "h-claude-code",
+      "type": "support"
+    },
+    {
+      "source": "me-ai-native-thread",
+      "target": "h-harness100",
+      "type": "related"
+    },
+    {
+      "source": "me-loop-vs-agentteam",
+      "target": "cc-loop-eng",
+      "type": "related"
+    },
+    {
+      "source": "me-loop-vs-agentteam",
+      "target": "h-agent-team",
+      "type": "related"
+    },
+    {
+      "source": "me-ragdebate",
+      "target": "km-vs-rag",
+      "type": "related"
+    },
+    {
+      "source": "me-ragdebate",
+      "target": "h-llm-app",
+      "type": "related"
+    },
+    {
+      "source": "cc-loop-eng",
+      "target": "h-claude-code",
+      "type": "related"
+    },
+    {
+      "source": "h-kb-builder",
+      "target": "km-llm-wiki",
+      "type": "support"
+    },
+    {
+      "source": "h-llm-app",
+      "target": "km-rag",
+      "type": "related"
+    },
+    {
+      "source": "ce-ai-employees",
+      "target": "ce-prompt-techniques",
+      "type": "part-of"
+    },
+    {
+      "source": "ce-ai-employees",
+      "target": "ce-skill-vs-plugin",
+      "type": "part-of"
+    },
+    {
+      "source": "ce-ai-employees",
+      "target": "ce-learnings",
+      "type": "part-of"
+    },
+    {
+      "source": "ce-ai-employees",
+      "target": "ce-cowork-31",
+      "type": "part-of"
+    },
+    {
+      "source": "ce-ai-employees",
+      "target": "ce-connectors",
+      "type": "part-of"
+    },
+    {
+      "source": "ce-ai-employees",
+      "target": "ce-5stages",
+      "type": "part-of"
+    },
+    {
+      "source": "ce-ai-employees",
+      "target": "ce-fable5-web",
+      "type": "part-of"
+    },
+    {
+      "source": "ce-ai-employees",
+      "target": "ce-ai-os",
+      "type": "support"
+    },
+    {
+      "source": "ce-prompt-techniques",
+      "target": "ce-interview",
+      "type": "part-of"
+    },
+    {
+      "source": "ce-prompt-techniques",
+      "target": "ce-multireview",
+      "type": "part-of"
+    },
+    {
+      "source": "ce-multireview",
+      "target": "as-parallel",
+      "type": "related"
+    },
+    {
+      "source": "ce-cowork-31",
+      "target": "ce-skill-vs-plugin",
+      "type": "related"
+    },
+    {
+      "source": "ce-cowork-31",
+      "target": "ce-hitl",
+      "type": "support"
+    },
+    {
+      "source": "ce-learnings",
+      "target": "bg-self-evolving",
+      "type": "related"
+    },
+    {
+      "source": "ce-connectors",
+      "target": "ce-ai-os",
+      "type": "support"
+    },
+    {
+      "source": "ce-5stages",
+      "target": "h-claude-code",
+      "type": "support"
+    },
+    {
+      "source": "ce-ai-employees",
+      "target": "h-agent-team",
+      "type": "related"
+    },
+    {
+      "source": "ce-ai-employees",
+      "target": "as-slash",
+      "type": "related"
+    },
+    {
+      "source": "ce-vs-stack",
+      "target": "as-stack",
+      "type": "related"
+    },
+    {
+      "source": "ce-vs-stack",
+      "target": "ce-ai-employees",
+      "type": "support"
+    },
+    {
+      "source": "mk-pain-point",
+      "target": "mk-show-problem-solution",
+      "type": "support"
+    },
+    {
+      "source": "mk-one-differentiator",
+      "target": "mk-show-problem-solution",
+      "type": "related"
+    },
+    {
+      "source": "mk-sharp-targeting",
+      "target": "mk-influencer-trust",
+      "type": "related"
+    },
+    {
+      "source": "mk-reframing",
+      "target": "mk-price-anchor",
+      "type": "related"
+    },
+    {
+      "source": "mk-niche-whitespace",
+      "target": "mk-reframing",
+      "type": "related"
+    },
+    {
+      "source": "mk-founder-authenticity",
+      "target": "mk-influencer-trust",
+      "type": "support"
+    },
+    {
+      "source": "mk-grit-customer-voice",
+      "target": "mk-niche-whitespace",
+      "type": "support"
+    },
+    {
+      "source": "mk-grit-customer-voice",
+      "target": "mk-founder-authenticity",
+      "type": "related"
+    },
+    {
+      "source": "mk-simple-idea-biz",
+      "target": "mk-pain-point",
+      "type": "extend"
+    },
+    {
+      "source": "mk-fight-where-customers",
+      "target": "mk-signature-format",
+      "type": "related"
+    },
+    {
+      "source": "mk-solo-brand",
+      "target": "cc-solopreneur",
+      "type": "related"
+    },
+    {
+      "source": "mk-solo-brand",
+      "target": "mk-founder-authenticity",
+      "type": "support"
+    },
+    {
+      "source": "mk-solo-brand",
+      "target": "mk-simple-idea-biz",
+      "type": "support"
+    },
+    {
+      "source": "tool-aimax-reviews",
+      "target": "tool-notebooklm",
+      "type": "part-of"
+    },
+    {
+      "source": "tool-aimax-reviews",
+      "target": "tool-claude-fable5",
+      "type": "part-of"
+    },
+    {
+      "source": "tool-aimax-reviews",
+      "target": "tool-chatgpt-56",
+      "type": "part-of"
+    },
+    {
+      "source": "tool-fable-loops",
+      "target": "tool-claude-fable5",
+      "type": "part-of"
+    },
+    {
+      "source": "tool-skills-pattern",
+      "target": "tool-agent-system-shift",
+      "type": "support"
+    },
+    {
+      "source": "tool-memory-context",
+      "target": "tool-agent-system-shift",
+      "type": "support"
+    },
+    {
+      "source": "tool-connectors",
+      "target": "tool-agent-system-shift",
+      "type": "support"
+    },
+    {
+      "source": "tool-chatgpt-56",
+      "target": "tool-skills-pattern",
+      "type": "related"
+    },
+    {
+      "source": "tool-claude-fable5",
+      "target": "tool-skills-pattern",
+      "type": "related"
+    },
+    {
+      "source": "tool-codebase-memory-mcp",
+      "target": "tool-oss-local-shift",
+      "type": "support"
+    },
+    {
+      "source": "tool-timesfm",
+      "target": "tool-oss-local-shift",
+      "type": "support"
+    },
+    {
+      "source": "tool-vendor-claims-caveat",
+      "target": "tool-aimax-reviews",
+      "type": "refute"
+    },
+    {
+      "source": "tool-agent-system-shift",
+      "target": "as-stack",
+      "type": "related"
+    },
+    {
+      "source": "tool-claude-fable5",
+      "target": "h-claude-code",
+      "type": "related"
+    },
+    {
+      "source": "tool-memory-context",
+      "target": "km-rag",
+      "type": "related"
+    },
+    {
+      "source": "sb-aimax-series",
+      "target": "sb-node-splitting",
+      "type": "part-of"
+    },
+    {
+      "source": "sb-aimax-series",
+      "target": "sb-hot-cache",
+      "type": "part-of"
+    },
+    {
+      "source": "sb-aimax-series",
+      "target": "sb-five-commands",
+      "type": "part-of"
+    },
+    {
+      "source": "sb-aimax-series",
+      "target": "sb-ace-framework",
+      "type": "part-of"
+    },
+    {
+      "source": "sb-aimax-series",
+      "target": "sb-obsidian-principles",
+      "type": "part-of"
+    },
+    {
+      "source": "sb-aimax-series",
+      "target": "bg-build-guide",
+      "type": "extend"
+    },
+    {
+      "source": "sb-aimax-series",
+      "target": "km-llm-wiki",
+      "type": "support"
+    },
+    {
+      "source": "sb-node-splitting",
+      "target": "bg-dream",
+      "type": "related"
+    },
+    {
+      "source": "sb-aimax-series",
+      "target": "km-compounding",
+      "type": "related"
+    },
+    {
+      "source": "sb-hot-cache",
+      "target": "km-llm-wiki",
+      "type": "related"
+    },
+    {
+      "source": "vc-playbook",
+      "target": "vc-vibe-coding",
+      "type": "part-of"
+    },
+    {
+      "source": "vc-playbook",
+      "target": "vc-results-over-info",
+      "type": "part-of"
+    },
+    {
+      "source": "vc-playbook",
+      "target": "vc-mini-web-app",
+      "type": "part-of"
+    },
+    {
+      "source": "vc-playbook",
+      "target": "vc-content-automation",
+      "type": "part-of"
+    },
+    {
+      "source": "vc-playbook",
+      "target": "vc-design-md",
+      "type": "part-of"
+    },
+    {
+      "source": "vc-playbook",
+      "target": "vc-pod-tshirt",
+      "type": "part-of"
+    },
+    {
+      "source": "vc-mini-web-app",
+      "target": "vc-results-over-info",
+      "type": "support"
+    },
+    {
+      "source": "vc-mini-web-app",
+      "target": "vc-lovable",
+      "type": "related"
+    },
+    {
+      "source": "vc-mini-web-app",
+      "target": "vc-layering",
+      "type": "extend"
+    },
+    {
+      "source": "vc-layering",
+      "target": "vc-batch-debug",
+      "type": "related"
+    },
+    {
+      "source": "vc-content-automation",
+      "target": "vc-higgsfield",
+      "type": "related"
+    },
+    {
+      "source": "vc-content-automation",
+      "target": "vc-human-touch",
+      "type": "extend"
+    },
+    {
+      "source": "vc-design-md",
+      "target": "vc-claude-design",
+      "type": "related"
+    },
+    {
+      "source": "vc-content-automation",
+      "target": "vc-design-md",
+      "type": "related"
+    },
+    {
+      "source": "vc-unique-mechanism",
+      "target": "vc-results-over-info",
+      "type": "support"
+    },
+    {
+      "source": "vc-pod-tshirt",
+      "target": "vc-claude-design",
+      "type": "related"
+    },
+    {
+      "source": "vc-playbook",
+      "target": "vc-performance-pricing",
+      "type": "part-of"
+    },
+    {
+      "source": "vc-promo-caveat",
+      "target": "vc-playbook",
+      "type": "refute"
+    },
+    {
+      "source": "vc-vibe-coding",
+      "target": "as-slash",
+      "type": "related"
+    },
+    {
+      "source": "vc-content-automation",
+      "target": "as-stack",
+      "type": "related"
+    },
+    {
+      "source": "vc-claude-design",
+      "target": "h-claude-code",
+      "type": "related"
+    },
+    {
+      "source": "mon-playbook",
+      "target": "mon-funnel",
+      "type": "part-of"
+    },
+    {
+      "source": "mon-funnel",
+      "target": "mon-demand-first",
+      "type": "part-of"
+    },
+    {
+      "source": "mon-demand-first",
+      "target": "mon-rrt",
+      "type": "support"
+    },
+    {
+      "source": "mon-demand-first",
+      "target": "mon-burning-problem",
+      "type": "support"
+    },
+    {
+      "source": "mon-funnel",
+      "target": "mon-ladder",
+      "type": "part-of"
+    },
+    {
+      "source": "mon-ladder",
+      "target": "mon-aios",
+      "type": "extend"
+    },
+    {
+      "source": "mon-funnel",
+      "target": "mon-digital-product",
+      "type": "part-of"
+    },
+    {
+      "source": "mon-funnel",
+      "target": "mon-boring-biz",
+      "type": "part-of"
+    },
+    {
+      "source": "mon-funnel",
+      "target": "mon-sales-auto",
+      "type": "part-of"
+    },
+    {
+      "source": "mon-funnel",
+      "target": "mon-content-auto",
+      "type": "part-of"
+    },
+    {
+      "source": "mon-content-auto",
+      "target": "mon-human-gate",
+      "type": "part-of"
+    },
+    {
+      "source": "mon-sales-auto",
+      "target": "mon-human-gate",
+      "type": "related"
+    },
+    {
+      "source": "mon-funnel",
+      "target": "mon-vibe-coding",
+      "type": "part-of"
+    },
+    {
+      "source": "mon-playbook",
+      "target": "mon-gamma",
+      "type": "support"
+    },
+    {
+      "source": "mon-gamma",
+      "target": "mon-demand-first",
+      "type": "support"
+    },
+    {
+      "source": "mon-playbook",
+      "target": "mon-execution",
+      "type": "support"
+    },
+    {
+      "source": "mon-hype-warning",
+      "target": "mon-playbook",
+      "type": "refute"
+    },
+    {
+      "source": "mon-hype-warning",
+      "target": "mon-execution",
+      "type": "related"
+    },
+    {
+      "source": "mon-aios",
+      "target": "cc-solopreneur",
+      "type": "related"
+    },
+    {
+      "source": "mon-vibe-coding",
+      "target": "cc-ai-native",
+      "type": "support"
+    },
+    {
+      "source": "mon-boring-biz",
+      "target": "cc-solopreneur",
+      "type": "related"
+    },
+    {
+      "source": "mon-sales-auto",
+      "target": "as-stack",
+      "type": "related"
+    },
+    {
+      "source": "mon-content-auto",
+      "target": "as-stack",
+      "type": "related"
+    }
   ]
 }
