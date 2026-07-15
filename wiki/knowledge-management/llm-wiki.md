@@ -29,3 +29,13 @@ RAG(Retrieval-Augmented Generation)는 **질의 시점**에 원문 조각(chunk)
 원 저장소는 2026년 4월부터 지속 운영된 실제 지식 베이스(출처 99건에서 컴파일된
 글 94편)에서 나온 워크플로를 Agent Skill 형태로 패키징한 것이며, Claude Code,
 Cursor, Codex CLI, OpenCode 등 Agent Skills 호환 도구에서 사용할 수 있다.
+
+## 실전 구축과 '드림 시퀀스'
+
+이 개념을 클로드 코드에서 실제로 세팅하는 방법은 [LLM 위키 실전 구축](llm-wiki-build-guide.md)
+글에서 다룬다. 거기서 소개하는 **드림 시퀀스(Dream Sequence)** — 주기적으로 위키의 모순·중복·
+낡은 정보를 점검·최신화하는 '건강 검진' 루틴 — 는 이 저장소의 **Lint 작업**에 해당한다.
+
+## See Also
+
+- [LLM 위키 실전 구축 (5대 빌딩블록 + 드림 시퀀스)](llm-wiki-build-guide.md)
