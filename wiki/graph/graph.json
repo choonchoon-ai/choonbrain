@@ -1654,6 +1654,32 @@
       ],
       "url": "../ai-monetization/ai-monetization-playbook/",
       "summary": "수치·성공담은 검증 안 된 홍보성 주장, 방법론만 취한다."
+    },
+    {
+      "id": "km-wiki-continuity",
+      "label": "위키 기반 연속성",
+      "type": "insight",
+      "origin": "mine",
+      "topic": "knowledge-management",
+      "tags": [
+        "지식관리",
+        "연속성"
+      ],
+      "url": "../knowledge-management/wiki-continuity/",
+      "summary": "지식이 대화 히스토리가 아닌 위키 파일에 쌓여 어느 기기·새 세션에서도 위키만 읽으면 맥락이 이어진다."
+    },
+    {
+      "id": "km-session-portability",
+      "label": "세션·기기 독립성",
+      "type": "concept",
+      "origin": "mine",
+      "topic": "knowledge-management",
+      "tags": [
+        "연속성",
+        "이식성"
+      ],
+      "url": "../knowledge-management/wiki-continuity/",
+      "summary": "저장소가 세션이 아니라 repo 자체라 세션은 일회성이어도 지식은 영속하며 기기 간 이동된다."
     }
   ],
   "links": [
@@ -2531,6 +2557,31 @@
       "source": "mon-content-auto",
       "target": "as-stack",
       "type": "related"
+    },
+    {
+      "source": "km-wiki-continuity",
+      "target": "km-session-portability",
+      "type": "part-of"
+    },
+    {
+      "source": "km-wiki-continuity",
+      "target": "km-ingest-synthesis",
+      "type": "support"
+    },
+    {
+      "source": "km-wiki-continuity",
+      "target": "km-compounding",
+      "type": "extend"
+    },
+    {
+      "source": "km-wiki-continuity",
+      "target": "km-llm-wiki",
+      "type": "part-of"
+    },
+    {
+      "source": "sb-hot-cache",
+      "target": "km-wiki-continuity",
+      "type": "support"
     }
   ]
 }

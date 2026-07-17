@@ -39,3 +39,4 @@ Cursor, Codex CLI, OpenCode 등 Agent Skills 호환 도구에서 사용할 수 �
 ## See Also
 
 - [LLM 위키 실전 구축 (5대 빌딩블록 + 드림 시퀀스)](llm-wiki-build-guide.md)
+- [위키 기반 연속성 (세션·기기 독립성)](wiki-continuity.md)

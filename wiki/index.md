@@ -8,9 +8,10 @@
 
 | Article | Summary | Updated |
 |---------|---------|---------|
-| [LLM Wiki (LLM이 유지하는 지식 위키)](knowledge-management/llm-wiki.md) | LLM이 위키를 쓰고 유지하는 Karpathy식 지식 관리 개념과 RAG와의 차이 | 2026-07-15 |
+| [LLM Wiki (LLM이 유지하는 지식 위키)](knowledge-management/llm-wiki.md) | LLM이 위키를 쓰고 유지하는 Karpathy식 지식 관리 개념과 RAG와의 차이 | 2026-07-17 |
 | [LLM 위키 실전 구축 (5대 빌딩블록 + 드림 시퀀스)](knowledge-management/llm-wiki-build-guide.md) | 클로드 코드로 제2의 뇌를 구축·운영하는 실전 레시피(Raw·Wiki·Outputs·claw.md·드림 시퀀스)와 이 저장소 구조와의 대조 | 2026-07-15 |
-| [AIMAX 세컨드브레인 제작 시리즈](knowledge-management/aimax-second-brain-series.md) | AIMAX_PD 세컨드브레인 3부작 종합 — 노드 분할·핫 캐시·5개 운영 명령어·옵시디언 ACE 프레임워크 | 2026-07-15 |
+| [AIMAX 세컨드브레인 제작 시리즈](knowledge-management/aimax-second-brain-series.md) | AIMAX_PD 세컨드브레인 3부작 종합 — 노드 분할·핫 캐시·5개 운영 명령어·옵시디언 ACE 프레임워크 | 2026-07-17 |
+| [위키 기반 연속성 (세션·기기 독립성)](knowledge-management/wiki-continuity.md) | 지식이 대화 히스토리가 아니라 위키 파일에 쌓여, 어느 기기·새 세션에서도 위키만 읽으면 맥락이 이어진다는 개인 통찰 | 2026-07-17 |
 
 ## ai-native-careers
 
