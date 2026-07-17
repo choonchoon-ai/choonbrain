@@ -1,0 +1,1758 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="개인 지식 위키 (LLM Wiki). 자료를 수집하고 한국어 지식 페이지로 컴파일한다.">
+      
+      
+      
+        <link rel="canonical" href="https://choonchoon-ai.github.io/choonbrain/vibe-coding/vibe-coding-playbook/">
+      
+      
+        <link rel="prev" href="../../marketing-cases/dtc-marketing-cases/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>바이브코딩 실전 플레이북 (AIMAX 채널) - choonbrain — 두 번째 브레인</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aimax" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="../.." title="choonbrain — 두 번째 브레인" class="md-header__button md-logo" aria-label="choonbrain — 두 번째 브레인" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            choonbrain — 두 번째 브레인
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              바이브코딩 실전 플레이북 (AIMAX 채널)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="다크 모드로"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="라이트 모드로"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="공유" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="choonbrain — 두 번째 브레인" class="md-nav__button md-logo" aria-label="choonbrain — 두 번째 브레인" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    choonbrain — 두 번째 브레인
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    지식 베이스 인덱스
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    위키 로그
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ai agents
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ai agents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-agents/claude-agent-stack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    클로드 에이전트 스택 (자율형 AI 팀 5가지 세팅)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-agents/claude-code-ai-employees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    클로드 코드로 AI 직원 만들기 (AIMAX 팁 모음)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-agents/harness-100/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harness 100 (에이전트 팀 하네스 컬렉션)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ai monetization
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ai monetization
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-monetization/ai-monetization-playbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI 수익화 플레이북 (AIMAX 채널)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ai native careers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ai native careers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-native-careers/careerhackeralex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    커리어해커 알렉스 (AI 네이티브 커리어 크리에이터)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ai tools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ai tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-tools/ai-model-tool-reviews/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI 모델·도구 리뷰 (AIMAX 채널)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge management
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Knowledge management
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge-management/aimax-second-brain-series/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIMAX 세컨드브레인 제작 시리즈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge-management/llm-wiki-build-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM 위키 실전 구축 (5대 빌딩블록 + 드림 시퀀스)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge-management/llm-wiki/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM Wiki (LLM이 유지하는 지식 위키)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge-management/wiki-continuity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    위키 기반 연속성 (세션·기기 독립성)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing cases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Marketing cases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../marketing-cases/dtc-marketing-cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DTC·마케팅 사례 모음 (AIMAX 채널)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vibe coding
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Vibe coding
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    바이브코딩 실전 플레이북 (AIMAX 채널)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    바이브코딩 실전 플레이북 (AIMAX 채널)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 앱·서비스·게임을 만들어 수익화
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 앱·서비스·게임을 만들어 수익화">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        미니 웹 앱: 가장 낮은 진입 장벽
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기존 데이터를 앱으로 리패키징
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실제 작동하는 SaaS 클론
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        웹게임
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        리드젠 에이전시(성과 과금)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 콘텐츠 자동화 (영상·릴스·유튜브·카드뉴스·글)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 콘텐츠 자동화 (영상·릴스·유튜브·카드뉴스·글)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        무인 페이스리스 영상 파이프라인
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        릴스·유튜브: 형식은 빌리고 내용은 내 맥락으로
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        클로드 스킬로 편집·리서치 자동화
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#md" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        카드뉴스: 디자인 MD + 스킬 등록
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 디자인 품질: 클로드 디자인
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 실물·고단가로 연계 (웹사이트·티셔츠)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 실물·고단가로 연계 (웹사이트·티셔츠)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        고단가 랜딩 페이지
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POD 티셔츠 자동화
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        관통하는 원칙
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See Also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 앱·서비스·게임을 만들어 수익화
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 앱·서비스·게임을 만들어 수익화">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        미니 웹 앱: 가장 낮은 진입 장벽
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기존 데이터를 앱으로 리패키징
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실제 작동하는 SaaS 클론
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        웹게임
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        리드젠 에이전시(성과 과금)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 콘텐츠 자동화 (영상·릴스·유튜브·카드뉴스·글)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 콘텐츠 자동화 (영상·릴스·유튜브·카드뉴스·글)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        무인 페이스리스 영상 파이프라인
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        릴스·유튜브: 형식은 빌리고 내용은 내 맥락으로
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        클로드 스킬로 편집·리서치 자동화
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#md" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        카드뉴스: 디자인 MD + 스킬 등록
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 디자인 품질: 클로드 디자인
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 실물·고단가로 연계 (웹사이트·티셔츠)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 실물·고단가로 연계 (웹사이트·티셔츠)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        고단가 랜딩 페이지
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POD 티셔츠 자동화
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        관통하는 원칙
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See Also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="aimax">바이브코딩 실전 플레이북 (AIMAX 채널)<a class="headerlink" href="#aimax" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Sources: AIMAX_PD (YouTube "AI 서비스 이렇게 만드세요"), 2026-05-12; AIMAX_PD (YouTube "AI 앱 자동수익화"), 2026-05-20; AIMAX_PD (YouTube "대학생이 뒹굴거리며 만든 AI툴"), 2026-05-21; AIMAX_PD (YouTube "엑셀로 돈 버는 대학생"), 2026-05-22; AIMAX_PD (YouTube "클로드 ai로 작가 되는 법"), 2026-06-04; AIMAX_PD (YouTube "클로드코드 카드뉴스 디자인 자동화"), 2026-06-10; AIMAX_PD (YouTube "딸깍 AI 영상 자동화"), 2026-06-14; AIMAX_PD (YouTube "편집자들 오열 직전"), 2026-06-19; AIMAX_PD (YouTube "클로드로 릴스 자동화하는법"), 2026-06-21; AIMAX_PD (YouTube "클로드 코드와 티셔츠로 수익화하기"), 2026-06-23; AIMAX_PD (YouTube "10년차 디자이너도 감탄한 클로드 디자인"), 2026-06-26; AIMAX_PD (YouTube "클로드로 고단가 웹사이트 제작법"), 2026-07-01; AIMAX_PD (YouTube "클로드로 유튜브 씹어먹기"), 2026-07-06; AIMAX_PD (YouTube "바이브코딩으로 게임 수익화 하는법"), 2026-07-10
+Raw: <a href="../../raw/vibe-coding/2026-05-12-how-to-build-ai-service.md">2026-05-12-how-to-build-ai-service.md</a>; <a href="../../raw/vibe-coding/2026-05-20-ai-app-auto-income.md">2026-05-20-ai-app-auto-income.md</a>; <a href="../../raw/vibe-coding/2026-05-21-student-ai-tool.md">2026-05-21-student-ai-tool.md</a>; <a href="../../raw/vibe-coding/2026-05-22-excel-money-student.md">2026-05-22-excel-money-student.md</a>; <a href="../../raw/vibe-coding/2026-06-04-claude-become-writer.md">2026-06-04-claude-become-writer.md</a>; <a href="../../raw/vibe-coding/2026-06-10-claude-cardnews-design.md">2026-06-10-claude-cardnews-design.md</a>; <a href="../../raw/vibe-coding/2026-06-14-one-click-ai-video.md">2026-06-14-one-click-ai-video.md</a>; <a href="../../raw/vibe-coding/2026-06-19-editors-on-the-verge.md">2026-06-19-editors-on-the-verge.md</a>; <a href="../../raw/vibe-coding/2026-06-21-claude-reels-automation.md">2026-06-21-claude-reels-automation.md</a>; <a href="../../raw/vibe-coding/2026-06-23-claude-tshirt-monetization.md">2026-06-23-claude-tshirt-monetization.md</a>; <a href="../../raw/vibe-coding/2026-06-26-claude-design-quality.md">2026-06-26-claude-design-quality.md</a>; <a href="../../raw/vibe-coding/2026-07-01-claude-high-value-website.md">2026-07-01-claude-high-value-website.md</a>; <a href="../../raw/vibe-coding/2026-07-06-claude-dominate-youtube.md">2026-07-06-claude-dominate-youtube.md</a>; <a href="../../raw/vibe-coding/2026-07-10-vibe-coding-game-monetization.md">2026-07-10-vibe-coding-game-monetization.md</a></p>
+</blockquote>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>AIMAX_PD 채널의 "바이브코딩" 시리즈 14편을 하나로 묶은 실전 정리다. 공통 전제는 하나다. <strong>코드를 몰라도 클로드(Claude)에 일상 언어로 지시해 앱·콘텐츠·디자인·실물 상품을 만들고 이를 수익화한다</strong>는 것. 반복되는 프레이밍은 "정보(전자책·강의)의 가치는 하락하고, 즉각적 결과를 주는 도구·시스템의 가치는 상승한다"이며(<a href="../../raw/vibe-coding/2026-06-04-claude-become-writer.md">작가 되는 법</a>, <a href="../../raw/vibe-coding/2026-05-20-ai-app-auto-income.md">AI 앱 자동수익화</a>), 화자들은 하나같이 "기술 장벽은 사라졌고 남은 건 실행력"이라고 강조한다.</p>
+<p><strong>주의 — 이 자료는 홍보성 쇼츠다.</strong> 대부분 영상이 "주 $12,496", "월 $26,000", "월 1억" 같은 수익 인증으로 후킹하고 말미에 커뮤니티 가입("댓글에 aimax")을 유도한다. 이런 수익 숫자는 검증되지 않았고 극단적 성공 사례이므로, 이 글에서는 <strong>"영상 주장에 따르면"</strong>으로 낮추고 재현 가능한 <strong>워크플로우와 기법</strong>에 초점을 맞춘다. 핵심 도구 스택은 클로드(Chat/Code/Design/Cowork), Higgsfield(이미지·영상 MCP), Lovable·Bolt(노코드 빌더), 그리고 배포용 Supabase·Vercel·GitHub이다.</p>
+<h2 id="1">1. 앱·서비스·게임을 만들어 수익화<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="_1">미니 웹 앱: 가장 낮은 진입 장벽<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>여러 편이 공통으로 미는 첫 모델은 <strong>단일 HTML 파일 미니 웹 앱</strong>이다(<a href="../../raw/vibe-coding/2026-05-20-ai-app-auto-income.md">AI 앱 자동수익화</a>, <a href="../../raw/vibe-coding/2026-06-04-claude-become-writer.md">작가 되는 법</a>). 서버·DB·인증을 생략한 프론트엔드 전용 앱으로 제작 시간과 유지보수를 최소화하고, 실행 후 60초 안에 "빠른 승리(quick win)"를 경험시키는 게 설계 원칙이다. 제작 도구는 클로드·Lovable·Bolt, 판매가는 $7~$47대로 제시된다.</p>
+<p>기획의 핵심은 <strong>"마이크로 문제" 하나를 완벽히 푸는 것</strong>이다. "건강 앱"이 아니라 "30대 워킹맘 번아웃용 5분 명상 앱"처럼 구체적일수록 클로드가 정확한 결과를 낸다. 레딧 등에서 타겟 고객의 실제 불만 언어를 수집해 그대로 앱 기능으로 옮기라고 권한다. 미니 앱 자체 판매보다 중요한 건 이것이 <strong>고단가 제품(강의·코칭)으로 가는 "관문 상품"</strong>이라는 구조로, 웰컴 이메일 시퀀스와 DM 자동화로 후속 판매를 붙인다.</p>
+<h3 id="_2">기존 데이터를 앱으로 리패키징<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p><a href="../../raw/vibe-coding/2026-05-22-excel-money-student.md">엑셀로 돈 버는 대학생</a>은 같은 논리를 <strong>이미 가진 스프레드시트</strong>에 적용한다. 그냥 팔면 $1~2짜리 템플릿이지만, 버튼·필터·대시보드를 붙인 미니 웹 앱으로 바꾸면 $17~97로 인식된다는 주장이다("포장만 바꿔 가치 50배"). 여기서 실전 기법 3가지가 유용하다.</p>
+<ul>
+<li><strong>역할 분리</strong>: 클로드는 두뇌/기획자, Lovable은 손/빌더. 초보가 클로드 코드로 직접 만들면 로그인·DB·호스팅에서 막히고 토큰이 폭발하니, 기획·브레인스토밍만 클로드 채팅으로 하고 실제 구현은 인증·DB·실배포가 자동인 Lovable에 맡기라는 것.</li>
+<li><strong>7단계 레이어링</strong>: 한 번에 모든 기능을 요청하지 말고 ① 기반(DB·로그인) → ② 온보딩 → ③ 핵심 기능 → ④ 대시보드 → ⑤ 보고서·내보내기 → ⑥ 설정 → ⑦ 마감 순으로 층을 쌓는다.</li>
+<li><strong>일괄 디버깅</strong>: 버그를 하나씩 고치면 다른 곳이 깨지므로 모아서 한 번에 지시하고 "내가 나열한 것만 수정하고 다른 것은 건드리지 마(Fix only what I listed. Do not modify anything else.)"를 붙여 AI의 부작용을 막는다.</li>
+</ul>
+<h3 id="saas">실제 작동하는 SaaS 클론<a class="headerlink" href="#saas" title="Permanent link">&para;</a></h3>
+<p><a href="../../raw/vibe-coding/2026-05-21-student-ai-tool.md">대학생이 만든 AI툴</a>은 한 단계 위인 <strong>반복 매출(SaaS)</strong> 을 노린다. 캘린들리 같은 앱을 로그인·캘린더 연동까지 붙여 만든다는 시연으로, 여기서 강조되는 건 <strong>테크 스택 분리</strong>다. 클로드(Design)로 클릭·페이지 이동이 되는 프론트엔드 UI를 만들고, GPT 코덱스(Codex)로 백엔드 기능과 자동 테스트(Browser Use)를 담당시킨다. 구글 캘린더 API 연동, Remotion으로 런칭 홍보 영상까지 AI가 단계별로 가이드하며, 로컬 앱은 Supabase(DB)·GitHub(코드)·Vercel(호스팅)로 실서비스화한다.</p>
+<h3 id="_3">웹게임<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p><a href="../../raw/vibe-coding/2026-07-10-vibe-coding-game-monetization.md">게임 수익화</a>는 같은 방법론을 웹게임에 적용한다. Sensor Tower·Crazy Games 인기 순위에서 1인 제작 가능한 소형 게임의 핵심 루프를 벤치마킹하고, 클로드 데스크톱 Cowork + Higgsfield MCP로 HTML5 구조·3D 자산·배포까지 처리한다("Neon Glide 2시간 완성" 주장). 진짜 핵심으로 꼽는 건 기술이 아니라 <strong>바이럴 메커니즘</strong>이다 — 모든 유저가 같은 코스를 도는 "데일리 시드"로 경쟁심을, 즉시 점수 공유로 재방문을 유도. 수익 경로는 플랫폼 배포·직접 호스팅+AdSense·B2B 에이전시 셋으로 제시된다.</p>
+<h3 id="_4">리드젠 에이전시(성과 과금)<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p><a href="../../raw/vibe-coding/2026-05-12-how-to-build-ai-service.md">AI 서비스 이렇게 만드세요</a>는 앱이 아니라 <strong>로컬 비즈니스 대상 리드 생성 대행</strong>이다. 메타 광고 라이브러리에서 6개월+ 살아남은(=검증된) 광고를 찾아 클로드로 스크립트를 분석하고 로고·컬러만 바꿔 재생산, 고의도 리드폼으로 리드를 받아 Go High Level(GHL)로 자동 예약·SMS 응대를 돌린다. 수익 모델은 <strong>리드당 과금(PPL)</strong> — 스트라이프↔GHL 연동으로 새 리드마다 클라이언트 카드에서 자동 결제. <a href="../../raw/vibe-coding/2026-06-04-claude-become-writer.md">작가 되는 법</a>은 이를 일반화해 <strong>"만든 것"이 아니라 "벌어준 것"의 10~20%를 월 리테이너로 받는 성과 기반 가격 공식</strong>과, 노션 클라이언트 포털로 매달 "ROI 영수증"을 보여줘 이탈을 막는 장치를 덧붙인다.</p>
+<h2 id="2">2. 콘텐츠 자동화 (영상·릴스·유튜브·카드뉴스·글)<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>이 묶음의 공통 원칙은 <strong>"AI가 90%를 생산하되, 인간이 마지막 안목·터치로 차별화한다"</strong>, 그리고 <strong>제작자가 아니라 감독·전략 기획자로 격상된다</strong>는 것이다(<a href="../../raw/vibe-coding/2026-06-21-claude-reels-automation.md">릴스 자동화</a>, <a href="../../raw/vibe-coding/2026-06-19-editors-on-the-verge.md">편집자들 오열 직전</a>).</p>
+<h3 id="_5">무인 페이스리스 영상 파이프라인<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p><a href="../../raw/vibe-coding/2026-06-14-one-click-ai-video.md">딸깍 AI 영상 자동화</a>는 페이스북/유튜브용 무인 채널의 풀 파이프라인을 제시한다(영상 주장: 종교 페이지 월 $26,000). 환경은 반드시 데스크톱 — Node.js + 클로드 코드 데스크톱 + Higgsfield 스킬(CLI 인증)이 있어야 파일 생성·외부 도구 통신이 된다. 워크플로우는 ① 검증 니치(종교·역사·미스터리·음모론)에서 스크립트 10~100개 자동 추출 → ② <strong>휴먼 에디트 필수</strong>(AI 원문 그대로 쓰면 품질·계정 제재 위험) → ③ 장면별 이미지 프롬프트 사전 설계 후 Higgsfield+GPT Image로 폴더 자동 저장 → ④ "카메라가 천천히 들어가는 4초 시네마틱"으로 변환 → ⑤ 보이스오버는 직접 녹음 또는 11 Labs 클로닝 → 다빈치 리졸브 편집. 핵심은 클로드를 "유능한 연구원+디자이너로 고용"해 제작 시간을 90% 줄이는 것이지 전부 맡기는 게 아니라는 점이다.</p>
+<h3 id="_6">릴스·유튜브: 형식은 빌리고 내용은 내 맥락으로<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p><a href="../../raw/vibe-coding/2026-06-21-claude-reels-automation.md">릴스 자동화</a>의 5단계는 영감 저장소(Poppy AI를 클로드의 눈으로 연결) → 맥락 중심 스크립트(대사만 베끼지 말고 스타일·속도·시각 구성까지 분석, 내 니치·말투 문서를 학습) → 인간 개입(직접 카메라 앞에 서서 에너지 전달) → Claude Code + Remotion 자동 편집("속도 높여줘" 한 줄에 코드 수정) → Metricool·Later로 최적 시간 예약 발행이다. <a href="../../raw/vibe-coding/2026-06-04-claude-become-writer.md">작가 되는 법</a>은 페이스리스 유튜브를 "수익화 속도 1위"로 꼽으며 6.7초 훅 법칙, 고RPM 니치(금융·심리학), Apify+Firecrawl 리드 발굴을 언급한다. <a href="../../raw/vibe-coding/2026-07-06-claude-dominate-youtube.md">유튜브 씹어먹기</a>는 사실상 아래 고단가 웹사이트편과 동일한 랜딩 카피 워크플로우를 유튜버 사례(Shane Hummus)로 재소개한다.</p>
+<h3 id="_7">클로드 스킬로 편집·리서치 자동화<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p><a href="../../raw/vibe-coding/2026-06-19-editors-on-the-verge.md">편집자들 오열 직전</a>은 콘텐츠 제작을 <strong>클로드 스킬(Claude Skills)</strong> 조합으로 시스템화한다. 긴 프롬프트 대신 스킬 파일 하나를 설치하면 클로드가 편집자+디자이너+전략가가 된다는 것. 대표 스킬 5종:</p>
+<ul>
+<li><strong>Carousel Skill</strong> — 바이럴 구조가 적용된 슬라이드 아웃라인 자동 생성</li>
+<li><strong>GPT Image 2 Prompt Skill</strong> — 레퍼런스 이미지를 일관된 프롬프트로 변환</li>
+<li><strong>Static Visual Skill</strong> — 스크립트를 도해·그래픽으로 변환</li>
+<li><strong>Video Editor Skill</strong> — "0.5초 이상 침묵 구간 모두 삭제" 같은 명령으로 타임라인 무인 편집</li>
+<li><strong>Motion Animation</strong> — 정지 자산을 동적 애니메이션으로 무한 확장(정밀 프롬프트를 Opus 4.8에 입력해 HTML→녹화/MP4)</li>
+</ul>
+<p>여기에 <strong>Virllo 커스텀 커넥터</strong>로 틱톡·인스타·쇼츠 400만+ 콘텐츠를 실시간 추적해 "팔로워는 적은데 조회수 폭발한 아웃라이어"를 발굴하는 게 학습 데이터의 시간적 한계를 우회하는 실전 팁이다.</p>
+<h3 id="md">카드뉴스: 디자인 MD + 스킬 등록<a class="headerlink" href="#md" title="Permanent link">&para;</a></h3>
+<p><a href="../../raw/vibe-coding/2026-06-10-claude-cardnews-design.md">카드뉴스 디자인 자동화</a>(전 애플·닛산 아트 디렉터 던컨 로고프 사례)는 콘텐츠 자동화와 디자인 품질을 잇는 다리다. 핵심은 ① 핀터레스트 레퍼런스를 <strong>"디자인 MD 파일"</strong>(색상·서체·간격·레이아웃 규칙 문서)로 변환해 카드뉴스·랜딩·뉴스레터 전반에 브랜드 일관성을 자동 유지, ② Higgsfield를 MCP로 연결해 "디자인 시스템 기반으로 이미지 생성해줘" 한 줄로 톤 유지, ③ 검증된 <strong>바이럴 5단 구조(커버 훅 → 문제 제기 → 단계별 해결 → 결과 → CTA)를 스킬로 등록</strong>해 주제 키워드만 넣으면 슬라이드 텍스트·이미지·인스타 캡션·링크드인 글까지 한 번에 뽑는 것. 결론은 "얼마나 열심히 만드느냐"가 아니라 "얼마나 정교한 시스템을 구축하느냐".</p>
+<h2 id="3">3. 디자인 품질: 클로드 디자인<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p><a href="../../raw/vibe-coding/2026-06-26-claude-design-quality.md">10년차 디자이너도 감탄한 클로드 디자인</a>은 Claude Design 업데이트를 정리하며, 위 워크플로우들의 <strong>품질·효율 병목을 푸는 기반 도구</strong>로서 의미가 있다.</p>
+<ul>
+<li><strong>직접 편집 UI</strong> — 캔버스 요소를 클릭해 텍스트·폰트·크기를 바로 바꾼다(Figma식 레이어 뷰). 사소한 수정에 프롬프트/토큰을 낭비하지 않는 게 실질 이득.</li>
+<li><strong>슬라이드·PPTX 내보내기</strong> — 주제만 던지면 디자인 시스템 기반 슬라이드 생성, .pptx 및 Canva·Gamma·Lovable·Vercel·Wix 연결.</li>
+<li><strong>Claude Code와 사용량 통합</strong> — Chat·Cowork·Code·Design 사용량을 하나로 통합하고 오류율 감소. <code>/design-sync</code>로 코드의 디자인 시스템을 가져오고, 디자인 완성본을 클릭 한 번에 Claude Code로 보내 실제 작동 서비스로 전환.</li>
+<li><strong>Markup + 외부 도구</strong> — 화면에 직접 그리거나 코멘트로 지시, "슬라이드에서 대시(—) 자제" 같은 상세 피드백 학습, Higgsfield 연결로 디자인 중 영상·이미지 즉석 생성.</li>
+</ul>
+<p>방향성은 디자인·코딩·문서를 한 앱에서 끝내는 "Everything App"이며, 목표는 <strong>컨텍스트 스위칭 비용을 0으로</strong> 만드는 것. 이는 앞선 카드뉴스편의 "디자인 MD" 철학(스타일을 재사용 가능한 시스템으로 박제)과 정확히 맞물린다.</p>
+<h2 id="4">4. 실물·고단가로 연계 (웹사이트·티셔츠)<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h3 id="_8">고단가 랜딩 페이지<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p><a href="../../raw/vibe-coding/2026-07-01-claude-high-value-website.md">고단가 웹사이트 제작법</a>(유튜버 야쿠프 페퍼트 사례, 영상 주장: 하루 랜딩 2개로 $3,000)의 핵심은 도구가 아니라 <strong>"가치의 크기"</strong>를 파는 카피 전략이다.</p>
+<ol>
+<li><strong>심층 타겟 분석 + 고유 기전(Unique Mechanism)</strong> — "랜딩 써줘"가 아니라 Reddit·Quora 데이터로 타겟의 상위 5가지 신념·가로막는 문제·기존 해결책 불만을 분석시키고, 거기서 '아하 순간'을 주는 고유 기전을 도출(예: 사이버보안 강의의 진짜 문제는 "지식 부족"이 아니라 "실력 증명의 부재=Proof Gap").</li>
+<li><strong>인간미 카피 + A/B 헤드라인</strong> — "더 인간적이고 진정성 있게 수정해줘"로 로봇 같은 초안을 다듬고, 문제 중심 vs 고유 기전 중심 두 버전을 제안(A/B 제안 자체가 전문성 신호).</li>
+<li><strong>Claude Code 노코드 빌드</strong> — 성공 랜딩을 GoFullPage로 전체 스크린샷/PDF화해 카피와 함께 투입, HTML/CSS 생성 후 GoHighLevel 커스텀 코드 영역에 붙여 즉시 배포, 깨진 부분은 증상만 설명하면 수정.</li>
+<li><strong>Upwork 권위 빌리기</strong> — 초보는 "알렉스 호모지·사브리 서비의 프레임워크를 연구해 적용한다"는 식으로 포지셔닝하고, 실 고객이 없으면 연습용 고품질 랜딩 4~5개를 작동 링크와 함께 게시.</li>
+</ol>
+<h3 id="pod">POD 티셔츠 자동화<a class="headerlink" href="#pod" title="Permanent link">&para;</a></h3>
+<p><a href="../../raw/vibe-coding/2026-06-23-claude-tshirt-monetization.md">티셔츠로 수익화</a>는 실물 상품(POD, 주문형 인쇄)을 시스템으로 접근한다. POD는 "양(volume)의 싸움"이라 개인이 다 하는 건 불가능하므로 클로드 디자인으로 시스템을 만든다: ① Etsy·TikTok Shop에서 잘 팔리는 검증된 패턴 발굴("원예는 나의 치료제" → 낚시·게임·달리기로 확장, 하나에서 50개+ 파생) → ② 클로드에 "문구 입력하면 티셔츠 디자인 파일로 자동 변환하는 도구 만들어줘"로 <strong>대량 생성기</strong> 제작 → ③ Hostinger Horizons 같은 AI 빌더로 독립 스토어 구축 → ④ Printful 연결로 제작·배송·CS 대행(재고 0) → ⑤ Etsy 목업+Canva 연출, 경쟁 제품 제목·태그를 클로드로 역설계해 SEO. 결론은 "천재적 디자인이 아니라 AI로 구축한 대량 생산 시스템의 복리 효과".</p>
+<h2 id="_9">관통하는 원칙<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>14편을 가로지르는 반복 메시지를 정리하면:</p>
+<ul>
+<li><strong>정보가 아니라 결과·변화를 판다</strong> — 전자책·강의(가치 하락) → 도구·시스템(즉각 변화).</li>
+<li><strong>검증된 것을 리믹스한다</strong> — 6개월+ 산 광고, 잘 팔린 게임 루프, 바이럴 아웃라이어, 성공한 랜딩/POD 패턴을 찾아 변주. 무에서 창조하지 않는다.</li>
+<li><strong>AI는 90%, 인간은 마지막 10%(안목·진정성·에너지)</strong> — 특히 콘텐츠는 휴먼 에디트가 품질과 계정 보호의 핵심.</li>
+<li><strong>시스템 &gt; 노동</strong> — 디자인 MD·스킬 등록·레이어링·일괄 디버깅처럼 재사용 가능한 시스템을 만들어 복리로 굴린다.</li>
+<li><strong>성과·가치 기반 가격</strong> — "만든 것"이 아니라 "벌어준 것"에 값을 매긴다.</li>
+</ul>
+<p>이 원칙들은 이 저장소가 다루는 <a href="../../ai-agents/claude-agent-stack/">클로드 에이전트 스택</a>·<a href="../../ai-agents/harness-100/">Harness 100</a>의 "단발 프롬프트가 아닌 재사용 시스템" 사고와 같은 계보이며, <a href="../../raw/vibe-coding/2026-06-04-claude-become-writer.md">작가 되는 법</a>이 인용한 카파시의 "LLM 위키"는 이 브레인 자체의 운영 철학과 직결된다.</p>
+<h2 id="see-also">See Also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../ai-agents/claude-agent-stack/">클로드 에이전트 스택</a></li>
+<li><a href="../../ai-tools/ai-model-tool-reviews/">AI 모델·도구 리뷰 (AIMAX 채널)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/choonchoon-ai/choonbrain" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
