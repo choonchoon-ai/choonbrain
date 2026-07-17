@@ -67,3 +67,4 @@ Hermes의 "경험 → 스킬 → 자기개선" 루프는 이 저장소가 이미
 - [클로드 코드로 AI 직원 만들기 (AIMAX 팁 모음)](claude-code-ai-employees.md)
 - [클로드 에이전트 스택 (자율형 AI 팀 5가지 세팅)](claude-agent-stack.md)
 - [위키 기반 연속성 (세션·기기 독립성)](../knowledge-management/wiki-continuity.md)
+- [Skills For Real Engineers (Matt Pocock)](mattpocock-skills.md) — 사람이 손으로 큐레이션한 스킬 모음(Hermes의 자동 스킬 생성과 대비)
