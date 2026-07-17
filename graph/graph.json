@@ -1759,6 +1759,84 @@
       ],
       "url": "../ai-agents/hermes-agent/",
       "summary": "Hermes의 스킬 자기개선/메모리 넛지는 이 브레인의 learnings.md 자가진화·연속성 개념을 자동화로 제품화한 형태."
+    },
+    {
+      "id": "mp-skills",
+      "label": "Skills For Real Engineers (Matt Pocock)",
+      "type": "entity",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "스킬",
+        "오픈소스",
+        "AI코딩"
+      ],
+      "url": "../ai-agents/mattpocock-skills/",
+      "summary": "실전 엔지니어링용 에이전트 스킬 모음; 바이브 코딩이 아니라 정렬·검증·설계 규율(MIT)."
+    },
+    {
+      "id": "mp-four-failures",
+      "label": "AI 개발 4대 실패 모드",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "스킬",
+        "AI코딩"
+      ],
+      "url": "../ai-agents/mattpocock-skills/",
+      "summary": "오정렬·장황함·깨진코드·설계퇴화를 각각의 스킬로 막는 설계 철학."
+    },
+    {
+      "id": "mp-grill",
+      "label": "grill (착수 전 인터뷰 스킬)",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "스킬",
+        "정렬"
+      ],
+      "url": "../ai-agents/mattpocock-skills/",
+      "summary": "grill-me·grill-with-docs로 작업 전 캐물어 오정렬을 방지."
+    },
+    {
+      "id": "mp-invoke-split",
+      "label": "User-invoked vs Model-invoked 스킬",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "스킬"
+      ],
+      "url": "../ai-agents/mattpocock-skills/",
+      "summary": "스킬을 사용자 호출/모델 자동호출로 나누는 분류(tdd·code-review는 model-invoked)."
+    },
+    {
+      "id": "mp-context-md",
+      "label": "CONTEXT.md 공유 언어",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "컨텍스트",
+        "문서"
+      ],
+      "url": "../ai-agents/mattpocock-skills/",
+      "summary": "도메인 용어·규칙을 문서로 박제해 토큰·소통 비용을 줄인다(claw.md/CLAUDE.md 계열)."
+    },
+    {
+      "id": "me-grill-is-interview",
+      "label": "grill = 인터뷰 기법",
+      "type": "insight",
+      "origin": "mine",
+      "topic": "cross",
+      "tags": [
+        "정렬",
+        "스킬"
+      ],
+      "url": "../ai-agents/mattpocock-skills/",
+      "summary": "Matt Pocock의 grill과 AIMAX '나를 심문하라' 인터뷰 기법은 착수 전 오정렬 방지라는 같은 원리."
     }
   ],
   "links": [
@@ -2710,6 +2788,61 @@
     {
       "source": "me-learningloop-is-learnings",
       "target": "km-wiki-continuity",
+      "type": "related"
+    },
+    {
+      "source": "mp-skills",
+      "target": "mp-four-failures",
+      "type": "part-of"
+    },
+    {
+      "source": "mp-skills",
+      "target": "mp-grill",
+      "type": "part-of"
+    },
+    {
+      "source": "mp-skills",
+      "target": "mp-invoke-split",
+      "type": "part-of"
+    },
+    {
+      "source": "mp-skills",
+      "target": "mp-context-md",
+      "type": "part-of"
+    },
+    {
+      "source": "mp-invoke-split",
+      "target": "ce-skill-vs-plugin",
+      "type": "extend"
+    },
+    {
+      "source": "mp-context-md",
+      "target": "bg-clawmd",
+      "type": "related"
+    },
+    {
+      "source": "mp-context-md",
+      "target": "tool-memory-context",
+      "type": "related"
+    },
+    {
+      "source": "mp-skills",
+      "target": "tool-skills-pattern",
+      "type": "support"
+    },
+    {
+      "source": "me-grill-is-interview",
+      "target": "mp-grill",
+      "type": "support"
+    },
+    {
+      "source": "me-grill-is-interview",
+      "target": "ce-interview",
+      "type": "support"
+    },
+    {
+      "source": "mp-skills",
+      "target": "hm-learning-loop",
       "type": "related"
     }
   ]
