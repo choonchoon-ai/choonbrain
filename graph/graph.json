@@ -1680,6 +1680,85 @@
       ],
       "url": "../knowledge-management/wiki-continuity/",
       "summary": "저장소가 세션이 아니라 repo 자체라 세션은 일회성이어도 지식은 영속하며 기기 간 이동된다."
+    },
+    {
+      "id": "hm-hermes-agent",
+      "label": "Hermes Agent (Nous Research)",
+      "type": "entity",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "에이전트",
+        "오픈소스",
+        "학습루프"
+      ],
+      "url": "../ai-agents/hermes-agent/",
+      "summary": "경험에서 스킬을 만들고 사용 중 개선하는 내장 학습 루프를 가진 자기개선형 AI 에이전트(MIT)."
+    },
+    {
+      "id": "hm-learning-loop",
+      "label": "내장 학습 루프",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "학습루프",
+        "에이전트"
+      ],
+      "url": "../ai-agents/hermes-agent/",
+      "summary": "경험→스킬 자동생성→사용 중 자기개선→지식 영속화 넛지의 닫힌 순환."
+    },
+    {
+      "id": "hm-curated-memory",
+      "label": "에이전트 큐레이션 메모리",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "메모리",
+        "에이전트"
+      ],
+      "url": "../ai-agents/hermes-agent/",
+      "summary": "FTS5 전문검색+LLM 요약으로 세션 간 회상; 에이전트가 기억을 자동 관리."
+    },
+    {
+      "id": "hm-terminal-backends",
+      "label": "6개 터미널 백엔드",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "인프라",
+        "서버리스"
+      ],
+      "url": "../ai-agents/hermes-agent/",
+      "summary": "local·Docker·SSH·Singularity·Modal·Daytona; Modal·Daytona는 유휴 시 하이버네이트."
+    },
+    {
+      "id": "hm-gateway",
+      "label": "다중 메시징 게이트웨이",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "게이트웨이",
+        "에이전트"
+      ],
+      "url": "../ai-agents/hermes-agent/",
+      "summary": "Telegram·Discord·Slack·WhatsApp·Signal·CLI를 단일 게이트웨이로 통합."
+    },
+    {
+      "id": "me-learningloop-is-learnings",
+      "label": "Hermes 학습루프 = learnings.md 제품화",
+      "type": "insight",
+      "origin": "mine",
+      "topic": "cross",
+      "tags": [
+        "학습루프",
+        "지식관리"
+      ],
+      "url": "../ai-agents/hermes-agent/",
+      "summary": "Hermes의 스킬 자기개선/메모리 넛지는 이 브레인의 learnings.md 자가진화·연속성 개념을 자동화로 제품화한 형태."
     }
   ],
   "links": [
@@ -2582,6 +2661,56 @@
       "source": "sb-hot-cache",
       "target": "km-wiki-continuity",
       "type": "support"
+    },
+    {
+      "source": "hm-hermes-agent",
+      "target": "hm-learning-loop",
+      "type": "part-of"
+    },
+    {
+      "source": "hm-hermes-agent",
+      "target": "hm-curated-memory",
+      "type": "part-of"
+    },
+    {
+      "source": "hm-hermes-agent",
+      "target": "hm-terminal-backends",
+      "type": "part-of"
+    },
+    {
+      "source": "hm-hermes-agent",
+      "target": "hm-gateway",
+      "type": "part-of"
+    },
+    {
+      "source": "hm-learning-loop",
+      "target": "ce-learnings",
+      "type": "related"
+    },
+    {
+      "source": "hm-curated-memory",
+      "target": "km-wiki-continuity",
+      "type": "related"
+    },
+    {
+      "source": "hm-hermes-agent",
+      "target": "as-parallel",
+      "type": "related"
+    },
+    {
+      "source": "me-learningloop-is-learnings",
+      "target": "hm-learning-loop",
+      "type": "support"
+    },
+    {
+      "source": "me-learningloop-is-learnings",
+      "target": "ce-learnings",
+      "type": "support"
+    },
+    {
+      "source": "me-learningloop-is-learnings",
+      "target": "km-wiki-continuity",
+      "type": "related"
     }
   ]
 }
