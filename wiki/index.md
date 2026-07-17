@@ -29,7 +29,8 @@ AI 에이전트 팀·오케스트레이션과 Claude Code 기반 워크플로우
 |---------|---------|---------|
 | [Harness 100 (에이전트 팀 하네스 컬렉션)](ai-agents/harness-100.md) | Claude Code 에이전트 팀으로 4~5명 전문가가 협업하는 10개 카테고리·100개 프로덕션 워크플로우 오픈소스 모음 | 2026-07-14 |
 | [클로드 에이전트 스택 (자율형 AI 팀 5가지 세팅)](ai-agents/claude-agent-stack.md) | 클로드를 자율형 AI 팀으로 세팅하는 5단계 골격(로컬 실행·병렬 다중에이전트·소셜 리서치·가상 개발조직·슬래시 명령어) | 2026-07-15 |
-| [클로드 코드로 AI 직원 만들기 (AIMAX 팁 모음)](ai-agents/claude-code-ai-employees.md) | 프롬프트 기법(인터뷰·다각도검토·문서체인)·스킬/learnings.md 자가진화·Cowork 31스킬로 광고·고객센터·콘텐츠·웹디자인 직무를 클로드에 맡기는 실전 팁 종합 | 2026-07-15 |
+| [클로드 코드로 AI 직원 만들기 (AIMAX 팁 모음)](ai-agents/claude-code-ai-employees.md) | 프롬프트 기법(인터뷰·다각도검토·문서체인)·스킬/learnings.md 자가진화·Cowork 31스킬로 광고·고객센터·콘텐츠·웹디자인 직무를 클로드에 맡기는 실전 팁 종합 | 2026-07-17 |
+| [Hermes Agent (Nous Research의 자기개선형 AI 에이전트)](ai-agents/hermes-agent.md) | 경험→스킬생성→자기개선의 내장 학습 루프와 에이전트 큐레이션 메모리, 6개 터미널 백엔드·다중 메시징 게이트웨이를 갖춘 Nous Research 오픈소스 에이전트(MIT) | 2026-07-17 |
 
 ## ai-tools
 

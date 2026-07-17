@@ -46,3 +46,4 @@
 
 - [LLM Wiki (LLM이 유지하는 지식 위키)](llm-wiki.md)
 - [AIMAX 세컨드브레인 제작 시리즈](aimax-second-brain-series.md)
+- [Hermes Agent (Nous Research의 자기개선형 AI 에이전트)](../ai-agents/hermes-agent.md) — 에이전트가 메모리·스킬로 세션 간 연속성을 자동 관리하는 사례

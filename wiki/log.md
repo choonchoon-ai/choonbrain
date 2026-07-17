@@ -1,5 +1,8 @@
 # 위키 로그
 
+## [2026-07-17] ingest | Hermes Agent (Nous Research의 자기개선형 AI 에이전트)
+- Updated: 클로드 코드로 AI 직원 만들기; 위키 기반 연속성 (See Also 상호참조)
+
 ## [2026-07-17] ingest | 위키 기반 연속성 (세션·기기 독립성)
 - Updated: LLM Wiki (LLM이 유지하는 지식 위키); AIMAX 세컨드브레인 제작 시리즈 (See Also 상호참조)
 

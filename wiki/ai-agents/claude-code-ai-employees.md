@@ -91,3 +91,4 @@ Anthropic이 6월 9일 낸 Mythos-class 첫 공개 모델 **Claude Fable 5**는 
 
 - [클로드 에이전트 스택 (자율형 AI 팀 5가지 세팅)](claude-agent-stack.md)
 - [Harness 100 (에이전트 팀 하네스 컬렉션)](harness-100.md)
+- [Hermes Agent (Nous Research의 자기개선형 AI 에이전트)](hermes-agent.md) — `learnings.md` 자가진화와 같은 '학습 루프'를 제품화한 사례
