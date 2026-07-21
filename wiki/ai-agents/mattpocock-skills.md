@@ -67,3 +67,4 @@ Verbosity 대응책인 `CONTEXT.md`는 프로젝트의 도메인 용어·규칙�
 - [클로드 코드로 AI 직원 만들기 (AIMAX 팁 모음)](claude-code-ai-employees.md) — 인터뷰 기법·스킬 vs 플러그인·learnings.md
 - [Hermes Agent (Nous Research의 자기개선형 AI 에이전트)](hermes-agent.md) — 스킬을 경험에서 자동 생성·개선하는 학습 루프
 - [AI 모델·도구 리뷰 (AIMAX 채널)](../ai-tools/ai-model-tool-reviews.md) — 스킬(Skills) 패턴과 메모리·컨텍스트 시스템
+- [Harness — 에이전트 팀 아키텍처 팩토리 (revfactory)](revfactory-harness.md) — 개인 스킬 규율 위에서 팀 구조 자체를 설계하는 상위 레이어

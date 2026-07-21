@@ -1,5 +1,8 @@
 # 위키 로그
 
+## [2026-07-17] ingest | Harness — 에이전트 팀 아키텍처 팩토리 (revfactory)
+- Updated: Harness 100; 클로드 에이전트 스택; Skills For Real Engineers (Matt Pocock) (See Also 상호참조)
+
 ## [2026-07-17] ingest | Skills For Real Engineers (Matt Pocock)
 - Updated: 클로드 코드로 AI 직원 만들기; Hermes Agent (See Also 상호참조)
 

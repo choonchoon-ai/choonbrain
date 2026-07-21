@@ -50,3 +50,4 @@
 
 - [Harness 100 (에이전트 팀 하네스 컬렉션)](harness-100.md) — 여기서 말하는 "팀"을 그대로 복사해 쓰는 100개 템플릿
 - [커리어해커 알렉스](../ai-native-careers/careerhackeralex.md) — 같은 'AI 네이티브' 축의 루프 엔지니어링 실무
+- [Harness — 에이전트 팀 아키텍처 팩토리 (revfactory)](revfactory-harness.md) — 이 5단계 세팅을 6가지 패턴 카탈로그로 정형화·자동생성
