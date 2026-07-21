@@ -1837,6 +1837,84 @@
       ],
       "url": "../ai-agents/mattpocock-skills/",
       "summary": "Matt Pocock의 grill과 AIMAX '나를 심문하라' 인터뷰 기법은 착수 전 오정렬 방지라는 같은 원리."
+    },
+    {
+      "id": "rh-harness-factory",
+      "label": "Harness (revfactory) 팀 팩토리",
+      "type": "entity",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "에이전트",
+        "메타팩토리",
+        "오픈소스"
+      ],
+      "url": "../ai-agents/revfactory-harness/",
+      "summary": "도메인 설명을 에이전트 팀+스킬로 자동 생성하는 Claude Code 메타 플러그인(Apache 2.0)."
+    },
+    {
+      "id": "rh-l3-meta-factory",
+      "label": "L3 메타 팩토리 층",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "메타팩토리",
+        "아키텍처"
+      ],
+      "url": "../ai-agents/revfactory-harness/",
+      "summary": "무엇을 실행할지가 아니라 누가 어떤 구조로 협업할지(팀 아키텍처)를 생성하는 층."
+    },
+    {
+      "id": "rh-six-patterns",
+      "label": "6가지 팀 아키텍처 패턴",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "에이전트",
+        "패턴"
+      ],
+      "url": "../ai-agents/revfactory-harness/",
+      "summary": "Pipeline·Fan-out/Fan-in·Expert Pool·Producer-Reviewer·Supervisor·Hierarchical Delegation."
+    },
+    {
+      "id": "rh-progressive-disclosure",
+      "label": "Progressive Disclosure 스킬",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "스킬",
+        "컨텍스트"
+      ],
+      "url": "../ai-agents/revfactory-harness/",
+      "summary": "컨텍스트 효율을 위해 스킬을 점진적으로 공개하는 산출 방식."
+    },
+    {
+      "id": "rh-ab-claim",
+      "label": "Harness A/B 효과 주장(+60%)",
+      "type": "claim",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "검증",
+        "효과"
+      ],
+      "url": "../ai-agents/revfactory-harness/",
+      "summary": "저자 자체측정 n=15에서 품질 49.5→79.3·15/15승·분산-32%; 제3자 재현은 미완."
+    },
+    {
+      "id": "me-factory-vs-collection",
+      "label": "Harness: 팩토리 ↔ 컬렉션",
+      "type": "insight",
+      "origin": "mine",
+      "topic": "cross",
+      "tags": [
+        "에이전트"
+      ],
+      "url": "../ai-agents/revfactory-harness/",
+      "summary": "revfactory Harness는 팀을 그 자리에서 설계하는 '팩토리', Harness 100은 완성 팀 '컬렉션' — 이름만 같다."
     }
   ],
   "links": [
@@ -2844,6 +2922,56 @@
       "source": "mp-skills",
       "target": "hm-learning-loop",
       "type": "related"
+    },
+    {
+      "source": "rh-harness-factory",
+      "target": "rh-l3-meta-factory",
+      "type": "part-of"
+    },
+    {
+      "source": "rh-harness-factory",
+      "target": "rh-six-patterns",
+      "type": "part-of"
+    },
+    {
+      "source": "rh-harness-factory",
+      "target": "rh-progressive-disclosure",
+      "type": "part-of"
+    },
+    {
+      "source": "rh-harness-factory",
+      "target": "rh-ab-claim",
+      "type": "support"
+    },
+    {
+      "source": "rh-six-patterns",
+      "target": "as-parallel",
+      "type": "related"
+    },
+    {
+      "source": "rh-six-patterns",
+      "target": "as-virtual-org",
+      "type": "related"
+    },
+    {
+      "source": "rh-harness-factory",
+      "target": "h-harness100",
+      "type": "related"
+    },
+    {
+      "source": "rh-harness-factory",
+      "target": "mp-skills",
+      "type": "extend"
+    },
+    {
+      "source": "me-factory-vs-collection",
+      "target": "rh-harness-factory",
+      "type": "support"
+    },
+    {
+      "source": "me-factory-vs-collection",
+      "target": "h-harness100",
+      "type": "support"
     }
   ]
 }
