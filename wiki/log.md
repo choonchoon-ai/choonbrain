@@ -1,5 +1,9 @@
 # 위키 로그
 
+## [2026-07-17] ingest | 루프 엔지니어링 (Claude Code 에이전트 루프 설계)
+- Note: 사용자 공유 블로그(claude.com/blog)는 egress 차단으로 본문 미접근 → 접근 가능한 공식 Agent SDK 문서로 원문 보존, 블로그는 검증된 뼈대만 기록
+- Updated: 커리어해커 알렉스; AI 모델·도구 리뷰 (See Also 상호참조)
+
 ## [2026-07-17] ingest | Harness — 에이전트 팀 아키텍처 팩토리 (revfactory)
 - Updated: Harness 100; 클로드 에이전트 스택; Skills For Real Engineers (Matt Pocock) (See Also 상호참조)
 

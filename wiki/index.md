@@ -33,6 +33,7 @@ AI 에이전트 팀·오케스트레이션과 Claude Code 기반 워크플로우
 | [Hermes Agent (Nous Research의 자기개선형 AI 에이전트)](ai-agents/hermes-agent.md) | 경험→스킬생성→자기개선의 내장 학습 루프와 에이전트 큐레이션 메모리, 6개 터미널 백엔드·다중 메시징 게이트웨이를 갖춘 Nous Research 오픈소스 에이전트(MIT) | 2026-07-17 |
 | [Skills For Real Engineers (Matt Pocock)](ai-agents/mattpocock-skills.md) | AI 개발의 4대 실패 모드(오정렬·장황·깨진코드·설계퇴화)를 인터뷰(grill)·tdd·code-review 등 스킬로 막는 Matt Pocock의 엔지니어링 스킬 모음, User/Model-invoked 분류·CONTEXT.md 공유언어(MIT) | 2026-07-17 |
 | [Harness — 에이전트 팀 아키텍처 팩토리 (revfactory)](ai-agents/revfactory-harness.md) | 도메인 설명을 6가지 팀 패턴(Pipeline·Fan-out·Expert Pool·Producer-Reviewer·Supervisor·Hierarchical) 중 하나로 에이전트 팀+스킬을 자동 생성하는 L3 메타 팩토리 Claude Code 플러그인(Apache 2.0). Harness 100과 이름만 같은 별개 | 2026-07-17 |
+| [루프 엔지니어링 (Claude Code 에이전트 루프 설계)](ai-agents/loop-engineering.md) | Claude를 정지 조건까지 반복하는 에이전트로 설계하는 법 — 턴·예산·effort·권한·컨텍스트 압축·훅(공식 SDK 문서)과 turn-based/goal/schedule/proactive 실전 4루프(블로그, 본문 미접근·뼈대만) | 2026-07-17 |
 
 ## ai-tools
 

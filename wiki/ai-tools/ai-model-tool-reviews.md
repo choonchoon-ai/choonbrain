@@ -68,3 +68,4 @@ Fable 5를 "1인 기업 OS"로 쓰는 4가지 축을 소개한다. 성능 주장
 
 - [클로드 에이전트 스택](../ai-agents/claude-agent-stack.md)
 - [LLM 위키 실전 구축](../knowledge-management/llm-wiki-build-guide.md)
+- [루프 엔지니어링 (Claude Code 에이전트 루프 설계)](../ai-agents/loop-engineering.md) — Fable 루프와 같은 '목표+검증 자기교정' 골격의 일반화

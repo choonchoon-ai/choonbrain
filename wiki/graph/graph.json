@@ -1915,6 +1915,71 @@
       ],
       "url": "../ai-agents/revfactory-harness/",
       "summary": "revfactory Harness는 팀을 그 자리에서 설계하는 '팩토리', Harness 100은 완성 팀 '컬렉션' — 이름만 같다."
+    },
+    {
+      "id": "lp-loop-engineering",
+      "label": "루프 엔지니어링",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "루프",
+        "에이전트",
+        "AI코딩"
+      ],
+      "url": "../ai-agents/loop-engineering/",
+      "summary": "Claude를 정지 조건까지 도구를 반복 호출하는 자율 에이전트로 설계하는 접근."
+    },
+    {
+      "id": "lp-stop-condition",
+      "label": "정지 조건·예산(max_turns/budget)",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "루프",
+        "제어"
+      ],
+      "url": "../ai-agents/loop-engineering/",
+      "summary": "도구 호출이 없어지면 자연 종료; max_turns·max_budget_usd로 폭주 방지(서브에이전트 지출 포함)."
+    },
+    {
+      "id": "lp-four-loops",
+      "label": "실전 4가지 루프",
+      "type": "procedure",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "루프"
+      ],
+      "url": "../ai-agents/loop-engineering/",
+      "summary": "turn-based·goal(/goal)·time-schedule(/schedule)·proactive; 공통 /loop. (블로그, 뼈대만 확인)"
+    },
+    {
+      "id": "lp-hooks-verify",
+      "label": "훅으로 루프 검증·단락",
+      "type": "concept",
+      "origin": "external",
+      "topic": "ai-agents",
+      "tags": [
+        "루프",
+        "검증"
+      ],
+      "url": "../ai-agents/loop-engineering/",
+      "summary": "PreToolUse·Stop 등 훅이 도구 호출을 검증·차단해 루프를 안전하게 만든다."
+    },
+    {
+      "id": "me-loop-is-spine",
+      "label": "루프가 '체계적 개발'의 공통 골격",
+      "type": "insight",
+      "origin": "mine",
+      "topic": "cross",
+      "tags": [
+        "루프",
+        "에이전트"
+      ],
+      "url": "../ai-agents/loop-engineering/",
+      "summary": "Fable 루프·Hermes 학습루프·Harness 팀패턴·알렉스 루프엔지니어링이 모두 '정지조건까지 자율반복+검증' 골격을 공유."
     }
   ],
   "links": [
@@ -2971,6 +3036,66 @@
     {
       "source": "me-factory-vs-collection",
       "target": "h-harness100",
+      "type": "support"
+    },
+    {
+      "source": "lp-loop-engineering",
+      "target": "lp-stop-condition",
+      "type": "part-of"
+    },
+    {
+      "source": "lp-loop-engineering",
+      "target": "lp-four-loops",
+      "type": "part-of"
+    },
+    {
+      "source": "lp-loop-engineering",
+      "target": "lp-hooks-verify",
+      "type": "part-of"
+    },
+    {
+      "source": "lp-loop-engineering",
+      "target": "cc-loop-eng",
+      "type": "support"
+    },
+    {
+      "source": "lp-loop-engineering",
+      "target": "tool-fable-loops",
+      "type": "related"
+    },
+    {
+      "source": "lp-hooks-verify",
+      "target": "mp-skills",
+      "type": "related"
+    },
+    {
+      "source": "lp-stop-condition",
+      "target": "km-wiki-continuity",
+      "type": "related"
+    },
+    {
+      "source": "me-loop-is-spine",
+      "target": "lp-loop-engineering",
+      "type": "support"
+    },
+    {
+      "source": "me-loop-is-spine",
+      "target": "hm-learning-loop",
+      "type": "support"
+    },
+    {
+      "source": "me-loop-is-spine",
+      "target": "tool-fable-loops",
+      "type": "support"
+    },
+    {
+      "source": "me-loop-is-spine",
+      "target": "rh-six-patterns",
+      "type": "support"
+    },
+    {
+      "source": "me-loop-is-spine",
+      "target": "cc-loop-eng",
       "type": "support"
     }
   ]
